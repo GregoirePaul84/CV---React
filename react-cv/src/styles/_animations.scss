@@ -1,0 +1,63 @@
+@keyframes smallCloudWind {
+    0% {
+      left: -300px;
+    }
+
+    100% {
+      left: 100%;
+    }
+}
+
+@keyframes middleCloudWind {
+    0% {
+      left: -600px;
+    }
+
+    100% {
+      left: 100%;
+    }
+}
+  
+@keyframes bigCloudWind {
+    0% {
+      left: -1000px;
+    }
+
+    100% {
+      left: 100%;
+    }
+}
+
+@keyframes airplaneMove {
+    0% {
+      left: -70px;
+    }
+
+    100% {
+      left: 100%;
+    }
+}
+
+@keyframes airplaneBackground {
+    0% {
+        background-color: rgba(24, 36, 37, 0);
+    }
+
+    100% {
+        background-color: rgba(24, 36, 37, 0.37);
+    }
+}
+
+@keyframes aboutAppears {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

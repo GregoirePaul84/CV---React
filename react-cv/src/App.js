@@ -12,13 +12,14 @@ const App = () => {
   return (
     <Router>
             <Routes>
+                <Route path="/" element={<Home/>} />
                 <Route path="/home" element={<Home/>} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/contact" element={<Contact/>} />
                 <Route path="/portfolio" element={<Portfolio/>} />
                 <Route path="/skills" element={<Skills/>} />
 
-                {/* Redirection vers /register si paramètres inconnus */}
+                {/* Redirection vers NotFound si paramètres inconnus */}
                 <Route path="*" element={<Notfound/>} />
 
             </Routes>
