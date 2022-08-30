@@ -1,0 +1,54 @@
+.about-container {
+    height: 2000px;
+    width: 100%;
+    
+    .background-picture {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -5;
+        background-image: url('../../images/3eplan.png');
+        background-attachment: fixed; 
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        filter: contrast(1.25) brightness(0.8);
+    }
+
+    .foreground-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        header {
+            width: 88%;
+            height: 15%;
+            max-height: 100px;
+            position: relative;
+            overflow: hidden;
+            animation: linear 1 forwards;
+            animation-name: airplaneBackground;
+            animation-duration: 4s;
+
+            .airplane-container {
+                position: absolute;
+                top: 16px;
+                display: flex;
+                align-items: center;
+                animation: linear 1 forwards;
+                animation-name: airplaneMove;
+                animation-duration: 3s;
+            }  
+        }
+    
+        main {
+            position: relative;
+            width: 88%;
+            height: 85%;
+            overflow: hidden;
+        }
+    }
+    
+}

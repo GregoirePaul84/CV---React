@@ -1,0 +1,39 @@
+aside {
+    width: calc(12% - 1px);
+    height: 100%;
+    border-right: 1px solid rgba(156, 144, 144, 0.28);
+    background-color: rgba(24, 36, 37, 0.37);
+
+    .logo {
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            font-family: 'Roboto Serif', serif;
+            font-weight: normal;
+            font-size: 4em;
+            text-align: center;
+            width: 50px;
+            margin: 0.5em 0;
+        }
+    }
+
+    .name-job-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h3 {
+            color: #BFBFBF;
+            font-family: 'Saira', sans-serif;
+            font-size: 1em;
+            margin: 5px;
+        }
+        .name {
+            font-weight: bold;
+        }
+        .job {
+            font-weight: lighter;
+        }
+    }
+}
