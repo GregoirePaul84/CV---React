@@ -1,28 +1,62 @@
 .about-container {
-    height: 2000px;
+    height: 2060px;
     width: 100%;
-    
+    position: absolute;
+    z-index: -6;
+    background-color: #99601D;
+
     .background-picture {
+        position: fixed;
+        z-index: -1;
         width: 100%;
         height: 100%;
-        position: absolute;
-        z-index: -5;
-        background-image: url('../../images/3eplan.png');
-        background-attachment: fixed; 
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat; 
+        img {
+            width: 100%;
+            height: 100%;
+        }
         filter: contrast(1.25) brightness(0.8);
     }
 
+        .parallax {
+            background-size: cover;
+        }
+
+        .parallax_1 {
+            position: fixed;
+            z-index: -5;
+        }
+
+        .parallax_2 {
+            position: absolute;
+            z-index: -3;
+        }
+
+        .parallax_3 {
+            position: absolute;
+            z-index: -2;
+        }
+
+        .parallax_4 {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .parallax_5 {
+            position: absolute;
+            z-index: -4;
+        }
+    
+
     .foreground-content {
         width: 100%;
-        height: 100%;
+        height: 2000px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
 
         header {
+            display: flex;
+            align-self: flex-end;
             width: 88%;
             height: 15%;
             max-height: 100px;
