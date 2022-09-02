@@ -8,6 +8,7 @@ import parallax4 from '../images/1erplan-2.png';
 import parallax5 from '../images/4eplan.png';
 import parallax6 from '../images/5eplan.png';
 import parallax7 from '../images/sun2.png';
+import parallax8 from '../images/sun_sunset.png';
 
 
 const About = () => {
@@ -25,19 +26,32 @@ const About = () => {
             const selectSun = document.querySelector('.parallax_6');
             const selectNight = document.querySelector('.background-night');
             const selectOpacity = selectNight.getAttribute('style');
-            
+            const removeDecimal = Math.trunc(-scrollY + 1000);
+            const selectSunnyDay = document.querySelector('.sun');
+            const selectSunset = document.querySelector('.sunset');
 
-            console.log(scrollY);
+            console.log(removeDecimal / 1000 * 10);
             if (scrollY !== 0 && scrollY < 1320.800048828125) {
+
                 selectSand2.style.transform = `translateY(-${scrollY / 12}px)`;
                 selectSand3.style.transform = `translateY(-${scrollY / 7}px)`;
                 selectSand4.style.transform = `translateY(-${scrollY / 5}px)`;
                 selectSand5.style.transform = `translateY(-${scrollY / 15}px)`;
-                selectSun.style.transform = `translate(-${scrollY / 5}px, ${scrollY / 5}px)`;
+                selectSun.style.transform = `translate(-${scrollY / 7}px, ${scrollY / 6}px)`;
+                selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
                 selectNight.style.opacity = `${scrollY / 3000}`;
+                selectSunnyDay.style.opacity = `${removeDecimal / 1000}`;
+                selectSunset.style.opacity = `${scrollY / 600}`;
 
-                if (scrollY >= 300) {
-                    selectSun.style.filter = `blur(10px) hue-rotate(-${scrollY / 13}deg)`;
+                // if (scrollY >= 400) {
+                //     selectSun.style.filter = `blur(10px)`;
+                //     selectSunset.style.opacity = `${scrollY / 100}`;
+                // }
+
+
+                if (scrollY >= 800) {
+                    selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
+                    selectSunset.style.opacity = `${scrollY / 100}`;
                 }
             }
 
@@ -46,7 +60,7 @@ const About = () => {
                 selectSand2.style.transform = `translateY(-${1320.800048828125 / 12}px)`;
                 selectSand3.style.transform = `translateY(-${1320.800048828125 / 7}px)`;
                 selectSand4.style.transform = `translateY(-${scrollY / 5}px)`;
-                selectSun.style.filter = `blur(10px) hue-rotate(286deg)`;
+                selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
                 selectNight.style.opacity = `${scrollY / 3000}`;
 
                 if (selectValue >= '0.4432') {
@@ -59,7 +73,8 @@ const About = () => {
                 selectSand3.style.transform = `translateY(0)`;
                 selectSand4.style.transform = `translateY(0)`;
                 selectNight.style.opacity = `0`;
-                selectSun.style.filter = `blur(10px) hue-rotate(0deg)`;
+                selectSun.style.filter = `blur(10px)`;
+                selectSunnyDay.style.opacity = `1`;
             }
             
           };
@@ -82,7 +97,8 @@ const About = () => {
                     <img src={parallax5} />
                 </div>
                 <div className="parallax parallax_6">
-                    <img src={parallax7} />
+                    <img src={parallax7} className="sun"/>
+                    <img src={parallax8} className="sunset"/>
                 </div>
                 <div className="parallax parallax_2">
                     <img src={parallax2} />

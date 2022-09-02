@@ -56,13 +56,14 @@
         // filter: blur(10px) hue-rotate(0);
 
         .sun {
-            position: relative;
-            .sunset {
-                position: absolute;
-                top: 0;
-                right: 0;
-                z-index: -4;
-            }
+            opacity: 1;
+        }
+
+        .sunset {
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0;
         }
     }
 
@@ -73,7 +74,6 @@
         z-index: 1;
         background-color: rgb(0, 14, 103);
     }
-    
 
     .foreground-content {
         width: 100%;
