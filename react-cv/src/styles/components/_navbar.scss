@@ -15,13 +15,6 @@ nav {
         cursor: pointer;
         border-top: 3px solid transparent;
 
-        a {
-            text-decoration: none;
-            &:visited {
-                color: inherit;
-            }
-        }
-
         &:hover {
             border-top: 3px solid;
         }

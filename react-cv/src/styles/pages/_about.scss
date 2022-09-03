@@ -1,5 +1,5 @@
 .about-container {
-    height: 2060px;
+    height: 2200px;
     width: 100%;
     position: absolute;
     z-index: -6;
@@ -10,69 +10,149 @@
         z-index: -1;
         width: 100%;
         height: 100%;
+        background-color: #b37a37;
         img {
             width: 100%;
             height: 100%;
         }
         filter: contrast(1.25) brightness(0.8);
-    }
-    
-    .parallax {
-        background-size: cover;
-    }
 
-    .parallax_1 {
-        position: fixed;
-        z-index: -5;
-    }
+        .smallCloud-container {
+            position: fixed; 
+            z-index: -1;
+            top: 0px;
+            animation: linear infinite;
+            animation-name: smallCloudWind;
+            animation-duration: 100s;
+          
+             .smallCloud {
+                 width: 200px;
+                 height: 200px;
+             }
+         }
 
-    .parallax_2 {
-        position: absolute;
-        z-index: -3;
-    }
+         .middleCloud-container {
+             position: fixed;
+             z-index: -1;
+             top: 110px;
+             animation: linear infinite;
+             animation-name: middleCloudWind;
+             animation-duration: 70s;
 
-    .parallax_3 {
-        position: absolute;
-        z-index: -2;
-    }
+             .middleCloud {
+                 width: 200px;
+                 height: 200px;
+             }
+         }
 
-    .parallax_4 {
-        position: absolute;
-        z-index: -1;
-        filter: blur(3px);
-    }
+         .bigCloud-container {
+             position: fixed;
+             z-index: -5;
+             top: 220px;
+             animation: linear infinite;
+             animation-name: bigCloudWind;
+             animation-duration: 120s;
 
-    .parallax_5 {
-        position: absolute;
-        z-index: -4;
-    }
+             .bigCloud {
+                 width: 200px;
+                 height: 200px;
+             }
+         }
 
-    .parallax_6 {
-        width: 200px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: -5;
-        // filter: blur(10px) hue-rotate(0);
-
-        .sun {
-            opacity: 1;
+        .parallax {
+            background-size: cover;
         }
-
-        .sunset {
+    
+        .parallax_1 {
+            position: fixed;
+            z-index: -6;
+        }
+    
+        .parallax_2 {
+            position: absolute;
+            z-index: -3;
+        }
+    
+        .parallax_3 {
+            position: absolute;
+            z-index: -2;
+        }
+    
+        .parallax_4 {
+            position: absolute;
+            z-index: -1;
+            filter: blur(3px);
+        }
+    
+        .parallax_5 {
+            position: absolute;
+            z-index: -4;
+        }
+    
+        .parallax_6 {
+            width: 200px;
             position: absolute;
             top: 0;
             right: 0;
-            opacity: 0;
+            z-index: -5;
+            // filter: blur(10px) hue-rotate(0);
+    
+            .sun {
+                opacity: 1;
+            }
+    
+            .sunset {
+                position: absolute;
+                top: 0;
+                right: 0;
+                opacity: 0;
+            }
         }
-    }
+    
+        .stars {
+            width: 100%;
+            height: 50%;
+            position: fixed;
+            z-index: -5;
+        }
+    
+        .comet {
+            position: absolute;
+            top: -10px;
+            left: 697px;
+            z-index: -5;
+            filter: blur(1px);
+            animation: linear infinite;
+            animation-name: comet;
+            animation-duration: 10s;
+        }
+    
+        .comet2 {
+            position: absolute;
+            top: 0;
+            left: 1200px;
+            z-index: -5;
+            filter: blur(1px);
+            animation: linear infinite;
+            animation-name: comet;
+            animation-duration: 15s;
+        }
 
-    .background-night {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        background-color: rgb(0, 14, 103);
+        .moon {
+            position: fixed;
+            top: 50px;
+            right: 40px;
+            z-index: -6;
+            filter: blur(1px);
+        }
+    
+        .background-night {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgb(0, 14, 103);
+        }
     }
 
     .foreground-content {
@@ -107,9 +187,29 @@
     
         main {
             position: relative;
+            display: flex;
+            align-self: flex-end;
             width: 88%;
             height: 85%;
-            overflow: hidden;
+
+            .scroll-down {
+                position: fixed;
+                // z-index: -2;
+                width: 100%;
+                height: 1000px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: hsl(180deg 6% 23%);
+                animation: ease-in-out infinite forwards;
+                animation-name: arrowScroll;
+                animation-duration: 3s;
+
+                svg {
+                    font-size: 40px;
+                }
+            }
         }
     }
     

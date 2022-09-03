@@ -3,12 +3,25 @@
 * {
     margin: 0;
     padding: 0;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
+
 
 body {
     width: 100%;
     box-sizing: border-box;
     color: #fff;
+}
+
+a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    &:visited {
+        color: inherit;
+    }
 }
 
 img {
