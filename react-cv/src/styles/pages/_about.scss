@@ -1,215 +1,100 @@
 .about-container {
-    height: 2200px;
+    height: 100vh;
     width: 100%;
-    position: absolute;
-    z-index: -6;
-    background-color: #99601D;
 
     .background-picture {
         position: fixed;
         z-index: -1;
         width: 100%;
         height: 100%;
-        background-color: #b37a37;
+
         img {
             width: 100%;
             height: 100%;
-        }
-        filter: contrast(1.25) brightness(0.8);
 
-        .smallCloud-container {
-            position: fixed; 
-            z-index: -1;
-            top: 0px;
-            animation: linear infinite;
-            animation-name: smallCloudWind;
-            animation-duration: 100s;
-          
-             .smallCloud {
-                 width: 200px;
-                 height: 200px;
-             }
-         }
-
-         .middleCloud-container {
-             position: fixed;
-             z-index: -1;
-             top: 110px;
-             animation: linear infinite;
-             animation-name: middleCloudWind;
-             animation-duration: 70s;
-
-             .middleCloud {
-                 width: 200px;
-                 height: 200px;
-             }
-         }
-
-         .bigCloud-container {
-             position: fixed;
-             z-index: -5;
-             top: 220px;
-             animation: linear infinite;
-             animation-name: bigCloudWind;
-             animation-duration: 120s;
-
-             .bigCloud {
-                 width: 200px;
-                 height: 200px;
-             }
-         }
-
-        .parallax {
-            background-size: cover;
-        }
-    
-        .parallax_1 {
-            position: fixed;
-            z-index: -6;
-        }
-    
-        .parallax_2 {
-            position: absolute;
-            z-index: -3;
-        }
-    
-        .parallax_3 {
-            position: absolute;
-            z-index: -2;
-        }
-    
-        .parallax_4 {
-            position: absolute;
-            z-index: -1;
-            filter: blur(3px);
-        }
-    
-        .parallax_5 {
-            position: absolute;
-            z-index: -4;
-        }
-    
-        .parallax_6 {
-            width: 200px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: -5;
-            // filter: blur(10px) hue-rotate(0);
-    
-            .sun {
-                opacity: 1;
+            &:nth-child(2) {
+                position: absolute;
+                width: auto;
+                height: auto;
+                top: 190px;
+                z-index: 1;
+                animation: linear infinite;
+                animation-name: dustWind;
+                animation-duration: 60s;
             }
-    
-            .sunset {
+
+            &:nth-child(3) {
                 position: absolute;
                 top: 0;
                 right: 0;
-                opacity: 0;
+                z-index: 3;
             }
         }
-    
-        .stars {
-            width: 100%;
-            height: 50%;
-            position: fixed;
-            z-index: -5;
-        }
-    
-        .comet {
-            position: absolute;
-            top: -10px;
-            left: 697px;
-            z-index: -5;
-            filter: blur(1px);
-            animation: linear infinite;
-            animation-name: comet;
-            animation-duration: 10s;
-        }
-    
-        .comet2 {
+
+        .background-night {
             position: absolute;
             top: 0;
-            left: 1200px;
-            z-index: -5;
-            filter: blur(1px);
-            animation: linear infinite;
-            animation-name: comet;
-            animation-duration: 15s;
+            left: 0;
+            z-index: 2;
+            background-color: rgb(0, 14, 103);
         }
 
-        .moon {
-            position: fixed;
-            top: 50px;
-            right: 40px;
-            z-index: -6;
-            filter: blur(1px);
-        }
-    
-        .background-night {
-            position: fixed;
+        .active-night {
+            animation: linear 1 forwards;
+            animation-name: nightFalling;
+            animation-duration: 5s;
             width: 100%;
             height: 100%;
-            z-index: 1;
-            background-color: rgb(0, 14, 103);
+        }
+
+        .active-light {
+            animation: linear 1 forwards;
+            animation-name: switchOnLight;
+            animation-duration: 1s;
+        }
+
+        .inactive-light {
+            animation: linear 1 forwards;
+            animation-name: switchOffLight;
+            animation-duration: 1s;
+        }
+
+        .active-day {
+            animation: linear 1 forwards;
+            animation-name: dawningDay;
+            animation-duration: 5s;
+            width: 100%;
+            height: 100%;
         }
     }
 
     .foreground-content {
         width: 100%;
-        height: 2000px;
+        height: 100%;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
 
         header {
+            background-color: rgba(24, 36, 37, 0.37);
             display: flex;
             align-self: flex-end;
             width: 88%;
-            height: 15%;
-            max-height: 100px;
+            height: 100px;
             position: relative;
             overflow: hidden;
             animation: linear 1 forwards;
             animation-name: airplaneBackground;
             animation-duration: 4s;
-
-            .airplane-container {
-                position: absolute;
-                top: 16px;
-                display: flex;
-                align-items: center;
-                animation: linear 1 forwards;
-                animation-name: airplaneMove;
-                animation-duration: 3s;
-            }  
         }
     
         main {
             position: relative;
             display: flex;
             align-self: flex-end;
+            align-items: flex-end;
+            justify-content: flex-end;
             width: 88%;
-            height: 85%;
-
-            .scroll-down {
-                position: fixed;
-                // z-index: -2;
-                width: 100%;
-                height: 1000px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: hsl(180deg 6% 23%);
-                animation: ease-in-out infinite forwards;
-                animation-name: arrowScroll;
-                animation-duration: 3s;
-
-                svg {
-                    font-size: 40px;
-                }
-            }
+            height: 100%;
         }
     }
     

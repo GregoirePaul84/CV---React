@@ -14,9 +14,6 @@ const Aside = () => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
-        console.log(scrollY);
-
-        const selectMobileNav = document.querySelector('.mobile-nav');
 
         handleScroll();
     

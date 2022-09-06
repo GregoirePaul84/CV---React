@@ -10,12 +10,32 @@
 
 @keyframes middleCloudWind {
     0% {
-      left: -800px;
+      left: 800px;
     }
 
     100% {
       left: 100%;
     }
+}
+
+@keyframes middleCloudWind2 {
+  0% {
+    left: -200px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes cloudAppears {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
   
 @keyframes bigCloudWind {
@@ -25,26 +45,6 @@
 
     100% {
       left: 100%;
-    }
-}
-
-@keyframes airplaneMove {
-    0% {
-      left: -70px;
-    }
-
-    100% {
-      left: 100%;
-    }
-}
-
-@keyframes airplaneBackground {
-    0% {
-        background-color: rgba(24, 36, 37, 0);
-    }
-
-    100% {
-        background-color: rgba(24, 36, 37, 0.37);
     }
 }
 
@@ -82,13 +82,52 @@
   }
 }
 
-@keyframes arrowScroll {
+@keyframes nightFalling{
   0% {
-      transform: translate(0, 0);
+      opacity: 0;
   }
 
   100% {
-      transform: translate(0, -10px);
+      opacity: 0.4432;
   }
 }
 
+@keyframes switchOnLight{
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes dawningDay{
+  0% {
+      opacity: 0.4432;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+@keyframes switchOffLight{
+  0% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+@keyframes dustWind {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
