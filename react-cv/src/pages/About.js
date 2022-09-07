@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 
 import arabic from '../images/arabic.jpg';
 import lightDown from '../images/light_down.png';
-import dust from '../images/dust.png';
 
 const About = () => {
 
@@ -22,15 +21,6 @@ const About = () => {
             selectNight.classList.remove('active-night');
             selectNight.classList.add('active-day');
             selectLight.style.opacity = "0";
-        }
-
-        function switchLight() {
-            console.log('off');
-            selectLight.style.opacity = "0"; 
-            setTimeout(() => {
-                console.log('on');
-                selectLight.style.opacity = "1";
-              }, 100);
         }
 
         function increaseTime() {
@@ -75,7 +65,6 @@ const About = () => {
         <div className="about-container">
             <div className="background-picture">
                 <img src={arabic} alt="" />
-                <img src={dust} alt="" />
                 <img src={lightDown} alt="" className='switch-light' />
                 <div className="background-night"></div>
             </div>

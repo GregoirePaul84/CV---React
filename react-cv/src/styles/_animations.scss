@@ -122,12 +122,32 @@
   }
 }
 
-@keyframes dustWind {
+@keyframes vietnamCloud {
   0% {
     left: -1000px;
   }
 
   100% {
     left: 100%;
+  }
+}
+
+@keyframes darkCloudsAppears{
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 0.4;
+  }
+}
+
+@keyframes darkCloudsDisappears{
+  0% {
+      opacity: 0.4;
+  }
+
+  100% {
+      opacity: 0;
   }
 }
