@@ -151,3 +151,20 @@
       opacity: 0;
   }
 }
+
+@keyframes blurAppears{
+  0% {
+      filter: blur(0px);
+  }
+
+  100% {
+      filter: blur(3px);
+  }
+}
+
+@keyframes rainFall {
+	to {
+		transform: translateY(105vh);
+	}
+}
+
