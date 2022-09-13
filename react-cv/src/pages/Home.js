@@ -132,11 +132,17 @@ const Home = () => {
         function typingEffect() {
             // Divise chaque lettre de chaque message dans un tableau
             let word = message[i].split("");
+            console.log('yes');
 
-            var loopTyping = function() {
+            const loopTyping = function() {
                 
                 // Si la longueur du tableau > 0, on retire le premier élément du tableau et on l'affiche dynamiquement
                 if (word.length > 0) {
+
+                    if (document.querySelector('.blink-text') === null) {
+                        return;
+                    }
+                    
                     document.querySelector('.blink-text').innerHTML += word.shift();
                 } 
                 // Si la longueur du tableau = 0, on lance l'effet de suppression
@@ -152,12 +158,20 @@ const Home = () => {
 
         function deletingEffect() {
             let word = message[i].split("");
-            var loopDeleting = function() {
+            
+            const loopDeleting = function() {
                 if (word.length > 0) {
+
+                    if (document.querySelector('.blink-text') === null) {
+                        return;
+                    }
+
                     // Enlève le dernier élement du tableau et on affiche dynamiquement
                     word.pop();
                     document.querySelector('.blink-text').innerHTML = word.join("");
-                } else {         
+                } 
+                
+                else {         
                     
                     // Changement de l'index de la variable word ligne 134
                     if (message.length > (i + 1)) {

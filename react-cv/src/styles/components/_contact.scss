@@ -1,0 +1,39 @@
+.contact-container {
+    height: 85%;
+    width: 40%;
+    max-width: 450px;
+    font-family: 'Anek Bangla', sans-serif;
+
+    .contact-background {
+        height: 40%;
+        width: 100%;
+        background-color: rgba(24, 36, 37, 0.70);
+
+        .contact-title {
+            display: flex;
+            justify-content: center;
+            h3 {
+                font-weight: 500;
+                margin: 20px 0;
+                color: #CF7FF4
+            }
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+
+            svg {
+                margin-right: 10px;
+                font-size: 1.2em;
+
+
+            }
+
+            .phone {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

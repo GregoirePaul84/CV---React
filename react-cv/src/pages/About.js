@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import Aside from '../components/Aside';
+import Contact from '../components/Contact';
 import Navbar from '../components/Navbar';
+import Presentation from '../components/Presentation';
 
 import lavanders from '../images/lavandes.jpg';
 
@@ -59,7 +61,8 @@ const About = () => {
                     <Navbar />
                 </header>
                 <main>
-                    
+                   <Contact />
+                   <Presentation /> 
                 </main>
             </div>
         </div>
