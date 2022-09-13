@@ -16,6 +16,13 @@ import stars from '../images/stars2.png';
 import comet from '../images/comet.png';
 import moon from '../images/moon.png';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import lamp from '../images/lamp2.png';
+import lightLamp from '../images/light_lamp.png';
+
+let timer;
+let timerLog;
 
 const Home = () => {
 
@@ -116,6 +123,62 @@ const Home = () => {
           };
     });
 
+    useEffect(() => {
+        
+        const message = ["Je suis Grégoire Paulet,", "Développeur web junior"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            // Divise chaque lettre de chaque message dans un tableau
+            let word = message[i].split("");
+
+            var loopTyping = function() {
+                
+                // Si la longueur du tableau > 0, on retire le premier élément du tableau et on l'affiche dynamiquement
+                if (word.length > 0) {
+                    document.querySelector('.blink-text').innerHTML += word.shift();
+                } 
+                // Si la longueur du tableau = 0, on lance l'effet de suppression
+                else {
+                    setTimeout(deletingEffect, 3000);
+                    return false;
+                };
+                // Relance la fonction tous les 100ms
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        };
+
+        function deletingEffect() {
+            let word = message[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    // Enlève le dernier élement du tableau et on affiche dynamiquement
+                    word.pop();
+                    document.querySelector('.blink-text').innerHTML = word.join("");
+                } else {         
+                    
+                    // Changement de l'index de la variable word ligne 134
+                    if (message.length > (i + 1)) {
+                        i++;
+                        
+                    } else {
+                        i = 0;
+                    };
+                    typingEffect();
+                    return false;
+                };
+                timer = setTimeout(loopDeleting, 50);
+            };
+    
+        loopDeleting();
+    };
+
+    typingEffect();
+
+    }, []);
+
     return (
         <div className="home-container">
             <div className="background-picture">
@@ -171,7 +234,22 @@ const Home = () => {
                     <Navbar />
                 </header>
                 <main>
-                    
+                    <div className="arrow-container">
+                        <FontAwesomeIcon icon={faChevronDown} className="arrow-scroll" />
+                        <div className="text-lamp-container">
+                            <div className="text-container">
+                                <h1>Bonjour et bienvenue sur mon site !</h1>
+                                <div className="blink-text-container">
+                                    <h2 className='blink-text'></h2>
+                                    <span>&#9646;</span>
+                                </div>
+                            </div>
+                            <div className="lamp-container">
+                                <img src={lamp} alt="" />
+                            </div>
+                            <img src={lightLamp} alt="" className='light-lamp'/>
+                        </div>
+                    </div>
                 </main>
             </div>
         </div>

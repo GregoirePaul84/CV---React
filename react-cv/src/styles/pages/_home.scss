@@ -188,11 +188,83 @@
         main {
             position: relative;
             display: flex;
+            flex-direction: column;
             align-self: flex-end;
-            align-items: flex-end;
-            justify-content: flex-end;
             width: 88%;
             height: 100%;
+
+            .arrow-container {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                .arrow-scroll {      
+                    font-size: 50px;    
+                    position: fixed;
+                    bottom: 0;
+                    background-color: hsl(185deg 21% 12% / 37%);
+                    border-radius: 50%;
+                    animation: ease-in-out infinite forwards;
+                    animation-name: moveArrow;
+                    animation-duration: 2s;
+                    animation-direction: alternate-reverse;
+                    }
+
+                .text-lamp-container {
+                    display: flex;
+                    position: absolute;
+                    bottom: 5%;
+
+                    .text-container {
+                        height: 220px;
+                        width: 628px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+    
+                        h1 {
+                            font-family: 'Anek Bangla', sans-serif;
+                            margin-bottom: 20px;
+                            font-size: 2.5em;
+                            color: #d1d1d1;
+                        }
+
+                        .blink-text-container {
+                            display: flex;
+                            align-items: center;
+        
+                            h2 {
+                                font-family: 'Anek Bangla', sans-serif;
+                                margin-bottom: 10px;
+                                font-weight: normal;
+                                font-size: 1.6em;
+                                color: #d5d5d5;
+                                height: 48px;
+                            }
+
+                            span {
+                                animation: blinker 1s linear infinite;
+                                margin-bottom: 10px;
+                                font-size: 1.6em;
+                            }
+                        }    
+                    }
+
+                    .lamp-container {
+                        transform: translateY(-142px);
+                    }
+                }       
+                
+                .light-lamp {
+                    position: absolute;
+                    top: -134px;
+                    right: 19px;
+                }
+            }
+
         }
     }
     

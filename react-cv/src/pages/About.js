@@ -2,71 +2,56 @@ import React, { useEffect } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
 
-import arabic from '../images/arabic.jpg';
-import lightDown from '../images/light_down.png';
+import lavanders from '../images/lavandes.jpg';
+
+let flowers;
 
 const About = () => {
 
     useEffect(() => {
-        const selectNight = document.querySelector('.background-night');
-        const selectLight = document.querySelector('.switch-light');
-        let time = 0;
+        const selectFlowers = document.querySelector('.flowers');
 
-        function displayNight() {
-            selectNight.classList.remove('active-day');
-            selectNight.classList.add('active-night');
+        function getRandomSize(min, max) {
+            return Math.random() * (max - min) + min;
         }
 
-        function displayDay() {
-            selectNight.classList.remove('active-night');
-            selectNight.classList.add('active-day');
-            selectLight.style.opacity = "0";
+        function riseFlowers() {
+
+            const flowerCircle = document.createElement('i');
+
+            flowerCircle.classList.add('fa-solid');
+	        flowerCircle.classList.add('fa-circle');
+
+            flowerCircle.style.left = getRandomSize(0 , 100) + '%';
+            flowerCircle.style.bottom = getRandomSize(0 , 30) + '%';
+
+	        flowerCircle.style.fontSize = getRandomSize(15 , 30) + 'px';
+
+            selectFlowers.appendChild(flowerCircle);
+
+            setTimeout(() => {
+                flowerCircle.remove();
+            }, 10000);
+              
         }
 
-        function increaseTime() {
-            time ++;
+        flowers = setInterval(riseFlowers, 1000);
 
-            if (time === 15) {
-                displayNight();
-            }
+    }, []);
 
-            else if (time === 20) {
-                selectLight.classList.remove('inactive-light');
-                selectLight.classList.add('active-light');
-            }
-
-            else if (time === 30) {
-                displayDay();
-            }
-
-            else if (time === 35) {
-                selectLight.classList.remove('active-light');
-                selectLight.classList.add('inactive-light');
-            }
-
-            else if (time > 35) {
-                time = 1;
-            }
+    useEffect(() => {
+       
+        return () => {
+            console.log('composant démonté');
+            clearInterval(flowers);
         }
-
-        setInterval(function () {
-            increaseTime();
-        }, 1000);
-            
-        setInterval(function () {
-            console.log(time);
-        }, 1000);
-
-        selectLight.style.opacity = "0";
-
-    }, [])
+    }, []);
 
     return (
         <div className="about-container">
             <div className="background-picture">
-                <img src={arabic} alt="" />
-                <img src={lightDown} alt="" className='switch-light' />
-                <div className="background-night"></div>
+                <img src={lavanders} alt="" />
+                <div className="flowers"></div>
             </div>
             <div className="foreground-content">
                 <Aside />
@@ -74,7 +59,7 @@ const About = () => {
                     <Navbar />
                 </header>
                 <main>
-                
+                    
                 </main>
             </div>
         </div>

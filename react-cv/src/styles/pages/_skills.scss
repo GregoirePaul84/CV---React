@@ -13,14 +13,22 @@
             height: 100%;
         }
 
-        .blur3px {
+        .blur2px {
             animation: ease-in-out 1;
             animation-name: blurAppears;
             animation-fill-mode: forwards;
             animation-duration: 3s; 
         }
 
+        .blur0px {
+            animation: ease-in-out 1;
+            animation-name: blurDisappears;
+            animation-fill-mode: forwards;
+            animation-duration: 3s; 
+        }
+
         .light-cloud {
+            filter: blur(3px);
             position: absolute;
             top: -319px;
             z-index: 1;
@@ -38,20 +46,14 @@
             z-index: 2;
 
             i {
-                color: rgb(201, 201, 201);;
+                color: rgb(209, 209, 209);
+                filter: blur(1px);
                 position: absolute;
 	            top: -20px;
                 animation: rainFall linear forwards;
             }
             
         }
-
-        // .active-rain {
-        //     animation: ease-in-out 1;
-        //     animation-fill-mode: forwards;
-        //     animation-name: rainAppears;
-        //     animation-duration: 2s;
-        // }
 
         .background-gray {
             width: 100%;
