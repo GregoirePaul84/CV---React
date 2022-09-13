@@ -3,6 +3,13 @@ import React from 'react';
 import photoCV from '../images/photo_cv.png'
 
 const Presentation = () => {
+
+    function displayContact() {
+        const selectContactBox = document.querySelector('.contact-container');
+        selectContactBox.classList.remove('contact-disappears');
+        selectContactBox.classList.add('contact-appears');
+    }
+
     return (
         <div className='presentation-container'>
             <div className="introduction-photo">
@@ -16,7 +23,7 @@ const Presentation = () => {
             </div>
             <div className="buttons">
                 <button>Mon CV</button>
-                <button>Contact</button>
+                <button onClick={displayContact}>Contact</button>
             </div>
         </div>
     );

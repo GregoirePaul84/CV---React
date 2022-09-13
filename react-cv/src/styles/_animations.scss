@@ -223,3 +223,19 @@
     opacity: 0;
   }
 }
+
+@keyframes contactAppears {
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes contactDisappears {
+  from {
+    transform: translateX(0px);
+  }
+  
+  to {
+    transform: translateX(-105vh);
+  }
+}

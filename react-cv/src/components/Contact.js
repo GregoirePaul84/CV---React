@@ -2,8 +2,16 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
+
+    function removeContactBox() {
+        const selectContactBox = document.querySelector('.contact-container');
+        selectContactBox.classList.remove('contact-appears');
+        selectContactBox.classList.add('contact-disappears');
+    }
+
     return (
         <div className='contact-container'>
             <div className="contact-background">
@@ -19,6 +27,9 @@ const Contact = () => {
                         <FontAwesomeIcon icon={faAt} />
                         gregoirepaulet84@gmail.com
                     </div>
+                </div>
+                <div className="contact-arrow" onClick={removeContactBox}>
+                    <FontAwesomeIcon icon={faChevronLeft} />
                 </div>
             </div>
         </div>
