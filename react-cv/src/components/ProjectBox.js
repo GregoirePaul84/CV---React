@@ -2,7 +2,7 @@ import React from 'react';
 
 import githubLogo from '../images/github.png'
 
-const ProjectBox = ({projectName, projectColor, projectFont, projectText, projectImg, projectSite}) => {
+const ProjectBox = ({projectName, projectColor, projectFont, projectText, projectImg, projectSite, projectGithub}) => {
 
     console.log(projectName);
     
@@ -20,7 +20,7 @@ const ProjectBox = ({projectName, projectColor, projectFont, projectText, projec
                     </div>
                     <div className="colored-line" style={{borderRight:"2px solid" + projectColor}}></div>
                     <div className="github-container">
-                        <a href="">
+                        <a href={projectGithub} target="_blank">
                             <img src={githubLogo} alt="" />
                             <span>Github</span>
                         </a>

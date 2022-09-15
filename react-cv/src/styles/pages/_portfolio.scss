@@ -83,7 +83,7 @@
 
     .foreground-content {
         width: 100%;
-        height: 100%;
+        height: 1900px;
         display: flex;
         flex-direction: column;
 
@@ -107,14 +107,14 @@
             justify-content: center;
             width: 88%;
             height: 100%;
+            margin: 2em 0;
 
             .all-projects-container {
                 width: 100%;
                 height: 100%;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-evenly;
                 flex-wrap: wrap;
             }
         }

@@ -8,6 +8,7 @@ import ProjectBox from '../components/ProjectBox';
 
 import bookiImg from '../images/booki.png';
 import ohMyFoodImg from '../images/ohmyfood.png';
+import laChouetteAgenceImg from '../images/lachouetteagence.png'
 
 let timePortfolio = 0;
 let rain;
@@ -15,17 +16,47 @@ let timer;
 
 let projectObject = [
     { projectName : "Booki",
-      projectColor: "#0065FC",
-      projectText: "Intégration d’une maquette en HTML / CSS, site responsive Desktop / Tablette / Mobile.",
+      projectColor : "#0065FC",
+      projectText : "Intégration d’une maquette en HTML / CSS, site responsive Desktop / Tablette / Mobile.",
       projectImg : bookiImg,
-      projectSite : "https://gregoirepaul84.github.io/booki/"
+      projectSite : "https://gregoirepaul84.github.io/booki/",
+      projectGithub : "https://github.com/GregoirePaul84/booki/tree/dev-branch"
     },
     { projectName : "Ohmyfood !",
       projectColor: "#9356DC",
       projectFont : "'Shrikhand', cursive",
-      projectText: "Intégration de maquettes en HTML / CSS, implémentation d’animations CSS.",
+      projectText : "Intégration de maquettes en HTML / CSS, implémentation d’animations CSS.",
       projectImg : ohMyFoodImg,
-      projectSite : "https://gregoirepaul84.github.io/GregoirePaulet_3_04112021/"
+      projectSite : "https://gregoirepaul84.github.io/GregoirePaulet_3_04112021/",
+      projectGithub : "https://github.com/GregoirePaul84/GregoirePaulet_3_04112021"
+    },
+    { projectName : "La chouette agence",
+      projectColor: "#F3976C",
+      projectText : "Optimisation d'un site déjà existant, amélioration du référencement et de l'accessibilité.",
+      projectImg : laChouetteAgenceImg,
+      projectSite : "https://gregoirepaul84.github.io/la-chouette-agence-modifi-/",
+      projectGithub : "https://github.com/GregoirePaul84/la-chouette-agence-modifi-"
+    },
+    { projectName : "Kanap",
+      projectColor: "#0A3B4D",
+      projectText : "Réalisation du front-end d'un site de e-commerce, communication avec une API et création d'un système de panier.",
+      projectImg : laChouetteAgenceImg,
+      projectSite : "https://gregoirepaul84.github.io/la-chouette-agence-modifi-/",
+      projectGithub : "https://github.com/GregoirePaul84/kanap"
+    },
+    { projectName : "Piiquante",
+      projectColor: "#C40000",
+      projectText : "Construction d'une API sécurisée, mise en place des opérations CRUD.",
+      projectImg : laChouetteAgenceImg,
+      projectSite : "https://gregoirepaul84.github.io/la-chouette-agence-modifi-/",
+      projectGithub : "https://github.com/GregoirePaul84/Piiquante"
+    },
+    { projectName : "Groupomania",
+      projectColor: "#FD2D01",
+      projectText : "Création d'un réseau social de A à Z. Réalisation des maquettes, de la base de données, du back et du front.",
+      projectImg : laChouetteAgenceImg,
+      projectSite : "https://gregoirepaul84.github.io/la-chouette-agence-modifi-/",
+      projectGithub : "https://github.com/GregoirePaul84/P7_Groupomania"
     }
 ];
 
@@ -128,6 +159,7 @@ const Portfolio = () => {
                             projectText={key.projectText}
                             projectImg={key.projectImg}
                             projectSite={key.projectSite}
+                            projectGithub={key.projectGithub}
                             />
                             )
                         }
