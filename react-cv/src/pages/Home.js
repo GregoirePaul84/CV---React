@@ -21,8 +21,6 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import lamp from '../images/lamp2.png';
 import lightLamp from '../images/light_lamp.png';
 
-let timer;
-let timerLog;
 
 const Home = () => {
 
@@ -132,7 +130,6 @@ const Home = () => {
         function typingEffect() {
             // Divise chaque lettre de chaque message dans un tableau
             let word = message[i].split("");
-            console.log('yes');
 
             const loopTyping = function() {
                 

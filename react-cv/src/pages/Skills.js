@@ -2,88 +2,68 @@ import React, { useEffect } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
 
-import vietnam from '../images/vietnam.jpg';
-import vietnamCloud from '../images/cloud_vietnam.png';
+import arabic from '../images/arabic.jpg';
+import lightDown from '../images/light_down.png';
 
 let timeSkills = 0;
-let rain;
 let timer;
-let timerLog;
 
 const Skills = () => {
 
     useEffect(() => {
+        const selectNight = document.querySelector('.background-night');
+        const selectLight = document.querySelector('.switch-light');
 
-        const selectWeather = document.querySelector('.background-gray');
-        const selectRainFall = document.querySelector('.background-rain');
-        const selectBgImg = document.querySelector('.bg-img');
+        function displayNight() {
+            selectNight.classList.remove('active-day');
+            selectNight.classList.add('active-night');
+        }
 
-        function rainFall() {
-
-            const waterDrop = document.createElement('i');
-
-            waterDrop.classList.add('fas');
-	        waterDrop.classList.add('fa-tint');
-
-            waterDrop.style.left = Math.random() * window.innerWidth + 'px';
-
-            waterDrop.style.opacity = Math.random() + 0.4;
-	        waterDrop.style.fontSize = Math.random() * 6 +'px';
-
-            waterDrop.style.animationDuration = Math.random() * 2 + 's';
-
-            selectRainFall.appendChild(waterDrop);
-
-            setTimeout(() => {
-                waterDrop.remove();
-            }, 2000)
+        function displayDay() {
+            selectNight.classList.remove('active-night');
+            selectNight.classList.add('active-day');
+            selectLight.style.opacity = "0";
         }
 
         function increaseTime() {
             timeSkills ++;
+            console.log(timeSkills);
 
             if (timeSkills === 15) {
-                selectWeather.classList.remove('inactive-background-gray');
-                selectWeather.classList.add('active-background-gray');
+                displayNight();
             }
 
             else if (timeSkills === 20) {
-                console.log('pluie');
-                rain = setInterval(rainFall, 10);
-                selectBgImg.classList.remove('blur0px');
-                selectBgImg.classList.add('blur2px');
+                selectLight.classList.remove('inactive-light');
+                selectLight.classList.add('active-light');
             }
 
-            else if (timeSkills === 60) {
-                console.log('soleil');
-                selectWeather.classList.remove('active-background-gray');
-                selectWeather.classList.add('inactive-background-gray');
-                selectBgImg.classList.remove('blur2px');
-                selectBgImg.classList.add('blur0px');
-                clearInterval(rain);
+            else if (timeSkills === 30) {
+                displayDay();
             }
 
-            else if (timeSkills > 120) {
+            else if (timeSkills === 35) {
+                selectLight.classList.remove('active-light');
+                selectLight.classList.add('inactive-light');
+            }
+
+            else if (timeSkills > 35) {
                 timeSkills = 1;
             }
         }
-        
+
         timer = setInterval(function () {
             increaseTime();
         }, 1000);
-            
-        timerLog = setInterval(function () {
-            console.log(timeSkills);
-        }, 1000);
-        
+
+        selectLight.style.opacity = "0";
+
     }, [])
 
     useEffect(() => {
-        // Anything in here is fired on component mount.
         return () => {
             console.log('composant démonté');
             clearInterval(timer);
-            clearInterval(timerLog);
             timeSkills = 0;
         }
     }, [])
@@ -91,10 +71,9 @@ const Skills = () => {
     return (
         <div className="skills-container">
             <div className="background-picture">
-                <img src={vietnam} alt="" className='bg-img' />
-                <img src={vietnamCloud} alt="" className='light-cloud'/>
-                <div className="background-rain"></div>
-                <div className="background-gray"></div>
+                <img src={arabic} alt="" />
+                <img src={lightDown} alt="" className='switch-light' />
+                <div className="background-night"></div>
             </div>
             <div className="foreground-content">
                 <Aside />
