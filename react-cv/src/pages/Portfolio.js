@@ -8,7 +8,11 @@ import ProjectBox from '../components/ProjectBox';
 
 import bookiImg from '../images/booki.png';
 import ohMyFoodImg from '../images/ohmyfood.png';
-import laChouetteAgenceImg from '../images/lachouetteagence.png'
+import laChouetteAgenceImg from '../images/lachouetteagence.png';
+import kanapImg from '../images/kanap.png';
+import piiquanteImg from '../images/piiquante.png';
+import groupomaniaImg from '../images/groupomania.png';
+
 
 let timePortfolio = 0;
 let rain;
@@ -40,21 +44,21 @@ let projectObject = [
     { projectName : "Kanap",
       projectColor: "#0A3B4D",
       projectText : "Réalisation du front-end d'un site de e-commerce, communication avec une API et création d'un système de panier.",
-      projectImg : laChouetteAgenceImg,
+      projectImg : kanapImg,
       projectSite : "https://gregoirepaul84.github.io/la-chouette-agence-modifi-/",
       projectGithub : "https://github.com/GregoirePaul84/kanap"
     },
     { projectName : "Piiquante",
       projectColor: "#C40000",
       projectText : "Construction d'une API sécurisée, mise en place des opérations CRUD.",
-      projectImg : laChouetteAgenceImg,
+      projectImg : piiquanteImg,
       projectSite : "https://gregoirepaul84.github.io/la-chouette-agence-modifi-/",
       projectGithub : "https://github.com/GregoirePaul84/Piiquante"
     },
     { projectName : "Groupomania",
       projectColor: "#FD2D01",
-      projectText : "Création d'un réseau social de A à Z. Réalisation des maquettes, de la base de données, du back et du front.",
-      projectImg : laChouetteAgenceImg,
+      projectText : "Création d'un MVP de réseau social de A à Z. Réalisation des maquettes, de la base de données, du back et du front.",
+      projectImg : groupomaniaImg,
       projectSite : "https://gregoirepaul84.github.io/la-chouette-agence-modifi-/",
       projectGithub : "https://github.com/GregoirePaul84/P7_Groupomania"
     }

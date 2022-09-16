@@ -1,0 +1,56 @@
+.technology-container {
+    background-color: hsl(185deg 21% 12% / 75%);
+    width: 80%;
+    height: 100%;
+
+    .technology-header {
+        height: 60px;
+        margin: 0 5%;
+        color: #E39F58;
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: 1.2em;
+        }
+    }
+
+    .orange-line {
+        border-bottom: 3px solid #E39F58;
+        width: 70%;
+        margin: 0 5%;
+    }
+
+    .experience-container {
+        margin: 10px 0 10px 5%;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+
+        .experience {
+            width: 50%;
+        }
+
+        .year {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .vertical-line-container {
+        margin: 0 5%;
+        width: 80%;
+        height: calc(100% - 112.6px);
+        display: flex;
+        .transparent-div {
+            width: 50%;
+            height: 100%;
+        }
+
+        .vertical-line {
+            width: 50%;
+            height: 100%;
+        }
+    }
+}

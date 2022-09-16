@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
+import Technology from '../components/Technology';
 
 import arabic from '../images/arabic.jpg';
 import lightDown from '../images/light_down.png';
@@ -81,7 +82,23 @@ const Skills = () => {
                     <Navbar />
                 </header>
                 <main>
-                    
+                    <section>
+                        <div className="choice-container">
+                            <div className="buttons-container">
+                                <div className="skills-header">
+                                    <h3>Compétences</h3>
+                                </div>
+                                <div className="orange-line"></div>
+                                <div className="buttons">
+                                    <button>Front-end</button>
+                                    <button>Back-end</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="language-container">
+                           <Technology />
+                        </div>
+                    </section>
                 </main>
             </div>
         </div>
