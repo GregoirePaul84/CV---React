@@ -25,63 +25,92 @@ import lightLamp from '../images/light_lamp.png';
 const Home = () => {
 
     const [scrollY, setScrollY] = useState(0);
+    const [innerWidth, setinnerWidth] = useState(window.innerWidth);
+    const [translateParallax, setTranslateParallax] = useState((-window.innerWidth / 100 + 11) * 100);
     
     useEffect(() => {
+
+        const selectSky = document.querySelector('.parallax_1');
+        const selectSand2 = document.querySelector('.parallax_2');
+        const selectSand3 = document.querySelector('.parallax_3');
+        const selectSand4 = document.querySelector('.parallax_4');
+        const selectSand5 = document.querySelector('.parallax_5');
+        const selectSun = document.querySelector('.parallax_6');
+        const selectNight = document.querySelector('.background-night');
+        const selectOpacity = selectNight.getAttribute('style');
+        const removeDecimal = Math.trunc(-scrollY + 1000);
+        const selectSunnyDay = document.querySelector('.sun');
+        const selectSunset = document.querySelector('.sunset');
+        const selectStars = document.querySelector('.stars');
+        const selectComet = document.querySelector('.comet');
+        const selectComet2 = document.querySelector('.comet2');
+        const selectCloudTop = document.querySelector('.smallCloud-container');
+        const selectCloudMiddle = document.querySelector('.middleCloud-container');
+        const selectCloudMiddle2 = document.querySelector('.middleCloud-container2');
+        const selectCloudBottom = document.querySelector('.bigCloud-container');
+        const selectMoon = document.querySelector('.moon');
+
         const handleScroll = () => {
             setScrollY(window.scrollY);
 
-            const selectSand2 = document.querySelector('.parallax_2');
-            const selectSand3 = document.querySelector('.parallax_3');
-            const selectSand4 = document.querySelector('.parallax_4');
-            const selectSand5 = document.querySelector('.parallax_5');
-            const selectSun = document.querySelector('.parallax_6');
-            const selectNight = document.querySelector('.background-night');
-            const selectOpacity = selectNight.getAttribute('style');
-            const removeDecimal = Math.trunc(-scrollY + 1000);
-            const selectSunnyDay = document.querySelector('.sun');
-            const selectSunset = document.querySelector('.sunset');
-            const selectStars = document.querySelector('.stars');
-            const selectComet = document.querySelector('.comet');
-            const selectComet2 = document.querySelector('.comet2');
-            const selectCloudTop = document.querySelector('.smallCloud-container');
-            const selectCloudMiddle = document.querySelector('.middleCloud-container');
-            const selectCloudMiddle2 = document.querySelector('.middleCloud-container2');
-            const selectCloudBottom = document.querySelector('.bigCloud-container');
-            const selectMoon = document.querySelector('.moon');
-           
+            console.log(`translate(-${translateParallax + scrollY / 7}px, ${scrollY / 6}px)`);
 
-            if (scrollY !== 0 && scrollY < 1320.800048828125) {
+            if(scrollY === 0) {
+                selectStars.style.opacity = `0`;
+            }
 
-                selectSand2.style.transform = `translateY(-${scrollY / 12}px)`;
-                selectSand3.style.transform = `translateY(-${scrollY / 7}px)`;
-                selectSand4.style.transform = `translateY(-${scrollY / 5}px)`;
-                selectSand5.style.transform = `translateY(-${scrollY / 15}px)`;
-                selectSun.style.transform = `translate(-${scrollY / 7}px, ${scrollY / 6}px)`;
-                selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
-                selectNight.style.opacity = `${scrollY / 3000}`;
-                selectSunnyDay.style.opacity = `${removeDecimal / 1000}`;
-                selectCloudTop.style.opacity = `${removeDecimal / 1000}`;
-                selectCloudMiddle.style.opacity = `${removeDecimal / 1000}`;
-                selectCloudMiddle2.style.opacity = `${removeDecimal / 1000}`;
-                selectCloudBottom.style.opacity = `${removeDecimal / 1000}`;
-                selectSunset.style.opacity = `${scrollY / 600}`;
-                selectComet.style.display = `none`;
-                selectComet2.style.display = `none`;
-                selectMoon.style.opacity = `${scrollY / 600 - 1.5}`;
+            if (scrollY < 1320.800048828125) {
 
-
-                if (scrollY >= 800) {
+                if (window.innerWidth > 1100) {
+                    selectSky.style.transform = `translate(0px, 0px)`;
+                    selectSand2.style.transform = `translate(0px, -${scrollY / 12}px)`;
+                    selectSand3.style.transform = `translate(0px, -${scrollY / 7}px)`;
+                    selectSand4.style.transform = `translate(0px, -${scrollY / 5}px)`;
+                    selectSand5.style.transform = `translate(0px, -${scrollY / 15}px)`;
+                    selectSun.style.transform = `translate(-${scrollY / 7}px, ${scrollY / 6}px)`;
                     selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
-                    selectSunset.style.opacity = `${scrollY / 100}`;
-                    selectStars.style.opacity = `${scrollY / 1000 - 0.8}`;
+                    selectNight.style.opacity = `${scrollY / 3000}`;
+                    selectSunnyDay.style.opacity = `${removeDecimal / 1000}`;
+                    selectCloudTop.style.opacity = `${removeDecimal / 1000}`;
+                    selectCloudMiddle.style.opacity = `${removeDecimal / 1000}`;
+                    selectCloudMiddle2.style.opacity = `${removeDecimal / 1000}`;
+                    selectCloudBottom.style.opacity = `${removeDecimal / 1000}`;
+                    selectSunset.style.opacity = `${scrollY / 600}`;
+                    selectComet.style.display = `none`;
+                    selectComet2.style.display = `none`;
+                    selectMoon.style.opacity = `${scrollY / 600 - 1.5}`;
+
+
+                    if (scrollY >= 800) {
+                        selectSunset.style.opacity = `${scrollY / 100}`;
+                        selectStars.style.opacity = `${scrollY / 1000 - 0.8}`;
+                    }
+                }
+
+                if (window.innerWidth <= 1100) {
+                    selectSky.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
+                    selectSun.style.transform = `translate(-${translateParallax + scrollY / 7}px, ${scrollY / 6}px)`;
+                    selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
+                    selectSunnyDay.style.opacity = `${removeDecimal / 1000}`;
+                    selectSunset.style.opacity = `${scrollY / 600}`;
+                    selectSand2.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 12}px)`;
+                    selectSand3.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 7}px)`;
+                    selectSand4.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 5}px)`;
+                    selectSand5.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 15}px)`;
+                    selectNight.style.opacity = `${scrollY / 3000}`;
+
+                    if (scrollY >= 800) {
+                        selectSunset.style.opacity = `${scrollY / 100}`;
+                        selectStars.style.opacity = `${scrollY / 1000 - 0.8}`;
+                    }
                 }
             }
 
             else if (scrollY >= 1320) {
                 const selectValue = selectOpacity.slice(9, 20);
-                selectSand2.style.transform = `translateY(-${1320 / 12}px)`;
-                selectSand3.style.transform = `translateY(-${scrollY / 7}px)`;
-                selectSand4.style.transform = `translateY(-${scrollY / 5}px)`;
+                selectSand2.style.transform = `translate(-${translateParallax}px, -${1320 / 12}px)`;
+                selectSand3.style.transform = `translate(-${translateParallax}px, -${scrollY / 7}px)`;
+                selectSand4.style.transform = `translate(-${translateParallax}px, -${scrollY / 5}px)`;
                 selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
                 selectNight.style.opacity = `${scrollY / 3000}`;
                 selectComet.style.display = `block`;
@@ -94,15 +123,12 @@ const Home = () => {
                 }
 
                 if (scrollY >= 4200) {
-                    selectSand4.style.transform = `translateY(-${4200 / 5}px)`;
+                    selectSand4.style.transform = `translate(-${translateParallax}px, -${4200 / 5}px)`;
                     selectSand4.style.filter = `blur(0px)`;
                 }
             }
 
             else {
-                selectSand2.style.transform = `translateY(0)`;
-                selectSand3.style.transform = `translateY(0)`;
-                selectSand4.style.transform = `translateY(0)`;
                 selectNight.style.opacity = `0`;
                 selectSun.style.filter = `blur(10px)`;
                 selectSunnyDay.style.opacity = `1`;
@@ -115,11 +141,28 @@ const Home = () => {
         };
         handleScroll();
 
-          window.addEventListener("scroll", handleScroll);
-          return () => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
             window.removeEventListener("scroll", handleScroll);
-          };
+        };
     });
+
+    useEffect(() => {
+
+        const detectInnerWidth = () => {
+            setinnerWidth(window.innerWidth);
+            setTranslateParallax((-window.innerWidth / 100 + 11) * 100);
+        }
+
+        detectInnerWidth();
+
+
+        window.addEventListener("resize", detectInnerWidth);
+        return () => {
+            window.removeEventListener("resize", detectInnerWidth);
+        };
+
+    }, [innerWidth, scrollY])
 
     useEffect(() => {
         

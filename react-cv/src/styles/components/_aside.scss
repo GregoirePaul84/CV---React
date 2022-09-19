@@ -2,6 +2,7 @@ aside {
     position: fixed;
     z-index: 1;
     width: calc(12% - 1px);
+    min-width: 100px;
     height: 100%;
     border-right: 1px solid rgba(156, 144, 144, 0.28);
     background-color: rgba(24, 36, 37, 0.37);
