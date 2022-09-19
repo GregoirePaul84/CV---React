@@ -1,15 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
-import Technology from '../components/Technology';
 
 import arabic from '../images/arabic.jpg';
 import lightDown from '../images/light_down.png';
+
+import Technology from '../components/Technology';
 
 let timeSkills = 0;
 let timer;
 
 const Skills = () => {
+
+    const [displayFront, setDisplayFront] = useState(false);
+    const [displayBack, setDisplayBack] = useState(false);
+
+    function changeDisplayFront() {
+        setDisplayBack(false);
+        setDisplayFront(!displayFront);
+        console.log('==== FRONT ====');
+        console.log(displayFront);
+    }
+
+    function changeDisplayBack() {
+        setDisplayFront(false);
+        setDisplayBack(!displayBack);
+        console.log('==== BACK ====');
+        console.log(displayBack);
+    }
 
     useEffect(() => {
         const selectNight = document.querySelector('.background-night');
@@ -28,7 +46,7 @@ const Skills = () => {
 
         function increaseTime() {
             timeSkills ++;
-            console.log(timeSkills);
+            // console.log(timeSkills);
 
             if (timeSkills === 15) {
                 displayNight();
@@ -90,13 +108,14 @@ const Skills = () => {
                                 </div>
                                 <div className="orange-line"></div>
                                 <div className="buttons">
-                                    <button>Front-end</button>
-                                    <button>Back-end</button>
+                                    <button onClick={changeDisplayFront}>Front-end</button>
+                                    <button onClick={changeDisplayBack}>Back-end</button>
                                 </div>
                             </div>
                         </div>
                         <div className="language-container">
-                           <Technology />
+                            {displayFront && <Technology languageCategory={'Front-end'}/>}
+                            {displayBack && <Technology languageCategory={'Back-end'}/>}
                         </div>
                     </section>
                 </main>
