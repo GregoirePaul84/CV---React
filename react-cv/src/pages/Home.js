@@ -18,7 +18,7 @@ import moon from '../images/moon.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import lamp from '../images/lamp2.png';
+import lamp from '../images/light_lamp2.png';
 import lightLamp from '../images/light_lamp.png';
 
 
@@ -53,7 +53,7 @@ const Home = () => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
 
-            console.log(`translate(-${translateParallax + scrollY / 7}px, ${scrollY / 6}px)`);
+            console.log(scrollY);
 
             if(scrollY === 0) {
                 selectStars.style.opacity = `0`;
@@ -88,16 +88,17 @@ const Home = () => {
                 }
 
                 if (window.innerWidth <= 1100) {
+
                     selectSky.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
                     selectMoon.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
                     selectSand2.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 12}px)`;
-                    selectSand3.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 7}px)`;
-                    selectSand4.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 5}px)`;
-                    selectSand5.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 15}px)`;
-                    selectSun.style.transform = `translate(-${translateParallax + scrollY / 7}px, ${scrollY / 6}px)`;
-                    selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
+                    selectSand3.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 9}px)`;
+                    selectSand4.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 7}px)`;
+                    selectSand5.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 17}px)`;
+                    selectSun.style.transform = `translate(-${translateParallax + scrollY / 7}px, ${scrollY / 8}px)`;
+                    selectSun.style.filter = `blur(${removeDecimal / 1000 * 6}px)`;
                     selectNight.style.opacity = `${scrollY / 3000}`;
-                    selectSunnyDay.style.opacity = `${removeDecimal / 1000}`;
+                    selectSunnyDay.style.opacity = `${removeDecimal / 1700}`;
                     selectCloudTop.style.opacity = `${removeDecimal / 1000}`;
                     selectCloudMiddle.style.opacity = `${removeDecimal / 1000}`;
                     selectCloudMiddle2.style.opacity = `${removeDecimal / 1000}`;
@@ -139,9 +140,12 @@ const Home = () => {
                 }
 
                 if (window.innerWidth <= 1100) {
+                    selectSky.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
+                    selectMoon.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
                     selectSand2.style.transform = `translate(-${translateParallax}px, -${1320 / 12}px)`;
-                    selectSand3.style.transform = `translate(-${translateParallax}px, -${scrollY / 7}px)`;
-                    selectSand4.style.transform = `translate(-${translateParallax}px, -${scrollY / 5}px)`;
+                    selectSand3.style.transform = `translate(-${translateParallax}px, -${scrollY / 9}px)`;
+                    selectSand4.style.transform = `translate(-${translateParallax}px, -${scrollY / 7}px)`;
+                    selectSand5.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 17}px)`;
                     selectSun.style.filter = `blur(${removeDecimal / 1000 * 10}px)`;
                     selectNight.style.opacity = `${scrollY / 3000}`;
                     selectComet.style.display = `block`;
@@ -318,24 +322,23 @@ const Home = () => {
             
             <div className="foreground-content">
                 <Aside />
-                <header>
+                <header id='tablet-header'>
                     <Navbar />
                 </header>
-                <main>
+                <main id='tablet-main'>
                     <div className="arrow-container">
                         <FontAwesomeIcon icon={faChevronDown} className="arrow-scroll" />
-                        <div className="text-lamp-container">
-                            <div className="text-container">
+                        <div className="text-lamp-container" id='tablet-text-lamp-container'>
+                            <div className="text-container" id='tablet-text-container'>
                                 <h1>Bonjour et bienvenue sur mon site !</h1>
                                 <div className="blink-text-container">
                                     <h2 className='blink-text'></h2>
                                     <span>&#9646;</span>
                                 </div>
                             </div>
-                            <div className="lamp-container">
+                            <div className="lamp-container" id='tablet-lamp-container'>
                                 <img src={lamp} alt="" />
                             </div>
-                            <img src={lightLamp} alt="" className='light-lamp'/>
                         </div>
                     </div>
                 </main>

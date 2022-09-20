@@ -195,6 +195,7 @@
             position: relative;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-self: flex-end;
             width: 88%;
             height: 100%;
@@ -220,12 +221,17 @@
 
                 .text-lamp-container {
                     display: flex;
+                    justify-content: center;
                     position: absolute;
                     bottom: 5%;
+                    width: 100%;
 
                     .text-container {
-                        height: 220px;
-                        width: 628px;
+                        min-height: 220px;
+                        max-width: 628px;
+                        line-height: 45px;
+                        // min-width: 300px;
+                        width: 100%;
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
@@ -260,15 +266,10 @@
                     }
 
                     .lamp-container {
-                        transform: translate(-70px, -142px);
+                        transform: translate(220px, -135px);
+                        position: absolute;
                     }
                 }       
-                
-                .light-lamp {
-                    position: absolute;
-                    top: -134px;
-                    right: 89px;
-                }
             }
 
         }

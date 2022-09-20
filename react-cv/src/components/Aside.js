@@ -22,7 +22,7 @@ const Aside = () => {
           window.removeEventListener("scroll", handleScroll);
         };
 
-  });
+    });
 
     return (
         <aside>
@@ -33,8 +33,8 @@ const Aside = () => {
                 <h3 className='name'>Grégoire Paulet</h3>
                 <h3 className='job'>Développeur web junior</h3>
             </div>
-            {(scrollY >= 100) ?
-            <nav className='mobile-nav'>
+            {(scrollY >= 100 || window.innerWidth <= 840) ?
+            <nav className='mobile-nav' id='tablet-mobile-nav'>
                 <NavLink to={'/home'}>
                     <div className="home-mobile">
                         <FontAwesomeIcon icon={faHouse} />
