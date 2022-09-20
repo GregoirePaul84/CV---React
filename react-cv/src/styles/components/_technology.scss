@@ -1,0 +1,123 @@
+.technology-container {
+    background-color: hsl(185deg 21% 12% / 75%);
+    width: 80%;
+    height: 80%;
+    position: relative;
+    z-index: -1;
+
+    .technology-header {
+        height: 60px;
+        margin: 0 20px;
+        color: #E39F58;
+        display: flex;
+        align-items: center;
+
+        h3 {
+            font-size: 1.2em;
+        }
+    }
+
+    .orange-line {
+        border-bottom: 3px solid #E39F58;
+        width: 70%;
+        margin: 0 20px;
+    }
+
+    .experience-container {
+        margin: 10px 20px;
+        width: calc(100% - 40px);
+        display: flex;
+        // justify-content: space-between;
+
+        .experience {
+            width: 45%;
+        }
+
+        .year {
+            width: 55%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .under-container {
+        margin: 0 20px;
+        width: calc(100% - 40px);
+        height: calc(100% - 112.6px);
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        .transparent-div {
+            width: 45%;
+            height: 100%;
+        }
+
+        .vertical-line-container {
+            width: 55%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+
+            .vertical-line {
+                height: 95%;
+                width: 1px;
+                background-color: hsl(0deg 0% 65% / 78%);
+            }
+        }
+    }
+
+    .languages-container {
+        height: calc(100% - 112.6px);
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+
+        .language {
+            display: flex;
+            align-items: center;
+            height: 45px;
+            margin-bottom: 5px;
+
+            .language-img {
+                width: 15%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                // img {
+                //     // background-color: #E39F58;
+                //     // border-radius: 50%;
+                //     // border: solid 1px black;
+                // }
+            }
+            .language-name {
+                width: 30%;
+                color: #E39F58;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+
+            .progress-bar-container {
+                width: 55%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .gray-progress-bar {
+                    width: 100%;
+                    height: 50%;
+                    background-color: #4F4F4F;
+                    position: relative;
+
+                    .orange-progress-bar {
+                        background-color: #E39F58;
+                        width: 50%;
+                        height: 100%;
+                        position: absolute;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+}
