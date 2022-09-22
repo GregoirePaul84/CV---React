@@ -57,7 +57,7 @@ const About = () => {
             </div>
             <div className="foreground-content" id='responsive-about-foreground'>
                 <Aside />
-                <header id='tablet-header'>
+                <header id='responsive-header'>
                     <Navbar />
                 </header>
                 <main id='responsive-about-main'>

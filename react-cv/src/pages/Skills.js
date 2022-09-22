@@ -94,13 +94,13 @@ const Skills = () => {
                 <img src={lightDown} alt="" className='switch-light' />
                 <div className="background-night"></div>
             </div>
-            <div className="foreground-content">
+            <div className="foreground-content" id='responsive-skills-foreground'>
                 <Aside />
-                <header>
+                <header id='responsive-header'>
                     <Navbar />
                 </header>
-                <main>
-                    <section>
+                <main id='responsive-skills-main'>
+                    <section id='responsive-skills-section'>
                         <div className="choice-container">
                             <div className="buttons-container">
                                 <div className="skills-header">

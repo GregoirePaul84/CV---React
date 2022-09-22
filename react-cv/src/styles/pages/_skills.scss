@@ -59,7 +59,6 @@
 
     .foreground-content {
         width: 100%;
-        height: calc(100% - 50px);
         display: flex;
         flex-direction: column;
 
@@ -80,7 +79,6 @@
             position: relative;
             display: flex;
             align-self: flex-end;
-            // justify-content: space-between;
             width: 88%;
             height: 100%;
 
@@ -95,14 +93,13 @@
 
             .choice-container {
                 width: 45%;
-                height: 45%;
                 display: flex;
                 justify-content: center;
 
                 .buttons-container {
                     background-color: hsl(185deg 21% 12% / 75%);
                     width: 90%;
-                    height: 60%;
+                    height: 150px;
 
                     .skills-header {
                         height: 60px;

@@ -34,7 +34,7 @@
 
 
 @media screen and (max-width: 840px) {
-    #tablet-header {
+    #responsive-header {
         display: none;
     }
 
@@ -229,4 +229,141 @@
             }
         }
     }
+}
+
+// Page Skills
+
+@media screen and (max-width: 1280px) {
+    #responsive-skills-section {
+        flex-direction: column;
+        width: auto;
+        margin-left: 5%;
+        margin-bottom: 50px;
+
+        .choice-container {
+            width: auto;
+            .buttons-container {
+                width: 80%;
+                min-width: 350px;
+
+                .buttons {
+                    gap: 3em;
+                }
+            }
+        }
+        
+        .language-container {
+            width: auto;
+
+            .technology-container {
+                min-width: 350px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+
+    #responsive-skills-main {
+        width: calc(100% - 100px);
+
+        #responsive-skills-section {
+            margin-top: 150px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 545px) {
+
+    #responsive-skills-foreground { 
+        height: 100%;
+
+        aside {
+            background-color: hsl(185deg 21% 12% / 75%);
+        }
+    }
+
+    #responsive-skills-main {
+        background-color: hsl(185deg 21% 12% / 75%);
+        padding-top: 20px;
+
+        #responsive-skills-section {
+            width: 100%;
+            margin: 0;
+            gap: 0;
+    
+            .buttons-container{
+                background-color: transparent;
+                min-width: auto;
+                width: 100%;
+
+                .buttons {
+                    gap: 1.5em;
+                }
+            }
+    
+            .technology-container {
+                background-color: transparent;
+                z-index: 0;
+                min-width: auto;
+                width: 100%;
+                height: fit-content;
+                padding-top: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 442px) {
+
+    #responsive-skills-main {
+
+        #responsive-skills-section {
+
+            .buttons-container {
+
+                .skills-header, .orange-line {
+                    margin: 0 20px;
+                }
+
+                .buttons {
+                    gap: 0;
+                }
+
+                button {
+                    width: calc(50% - 5px);
+                    &:nth-child(1) {
+                        margin-right: 5px;
+                        margin-left: 20px;
+                    }
+                    &:nth-child(2) {
+                        margin-left: 5px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            .experience, .transparent-div {
+                width: 15%;
+            }
+
+            .year, .vertical-line-container {
+                width: 85%;
+            }
+
+            .language-img {
+                margin-right: 10px;
+            }
+
+            .language-name {
+                display: none;
+            }
+
+            .progress-bar-container {
+                width: 85%;
+            }
+        }
+    }
+
 }

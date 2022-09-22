@@ -324,7 +324,7 @@ const Home = () => {
             
             <div className="foreground-content">
                 <Aside />
-                <header id='tablet-header'>
+                <header id='responsive-header'>
                     <Navbar />
                 </header>
                 <main id='tablet-main'>

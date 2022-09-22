@@ -11,11 +11,11 @@ const Contact = () => {
         selectContactBox.classList.remove('contact-appears');
         selectContactBox.classList.add('contact-disappears');
 
-        window.scrollBy({
-            top: -1000,
-            left: 0,
-            behavior : "smooth"
-        })
+        // window.scrollBy({
+        //     top: -1000,
+        //     left: 0,
+        //     behavior : "smooth"
+        // })
     }
 
     return (
