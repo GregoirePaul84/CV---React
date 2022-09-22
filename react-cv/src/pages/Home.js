@@ -90,6 +90,7 @@ const Home = () => {
                 if (window.innerWidth <= 1100) {
 
                     selectSky.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
+                    selectComet2.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
                     selectMoon.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
                     selectSand2.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 12}px)`;
                     selectSand3.style.transform = `translate(-${(-innerWidth / 100 + 11) * 100}px, -${scrollY / 9}px)`;
@@ -142,6 +143,7 @@ const Home = () => {
                 if (window.innerWidth <= 1100) {
                     selectSky.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
                     selectMoon.style.transform = `translateX(-${(-innerWidth / 100 + 11) * 100}px)`;
+                    selectSun.style.transform = `translate(-${scrollY / 7}px, ${scrollY / 6}px)`;
                     selectSand2.style.transform = `translate(-${translateParallax}px, -${1320 / 12}px)`;
                     selectSand3.style.transform = `translate(-${translateParallax}px, -${scrollY / 9}px)`;
                     selectSand4.style.transform = `translate(-${translateParallax}px, -${scrollY / 7}px)`;
@@ -311,7 +313,7 @@ const Home = () => {
                 <div className="comet">
                     <img src={comet} alt="" />
                 </div>
-                <div className="comet2">
+                <div className="comet2" id='tablet-comet'>
                     <img src={comet} alt="" />
                 </div>
                 <div className="moon">
