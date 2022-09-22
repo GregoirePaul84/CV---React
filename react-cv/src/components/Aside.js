@@ -9,6 +9,7 @@ import { NavLink } from 'react-router-dom';
 const Aside = () => {
 
     const [scrollY, setScrollY] = useState(0);
+    const [innerWidth, setinnerWidth] = useState(0);
     
     useEffect(() => {
         const handleScroll = () => {
@@ -16,10 +17,18 @@ const Aside = () => {
         };
 
         handleScroll();
+
+        const handleWidth = () => {
+            setinnerWidth(window.innerWidth);
+        };
+
+        handleScroll();
     
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleWidth);
         return () => {
           window.removeEventListener("scroll", handleScroll);
+          window.removeEventListener("resize", handleWidth);
         };
 
     });
@@ -33,7 +42,7 @@ const Aside = () => {
                 <h3 className='name'>Grégoire Paulet</h3>
                 <h3 className='job'>Développeur web junior</h3>
             </div>
-            {(scrollY >= 100 || window.innerWidth <= 840) ?
+            {(scrollY >= 100 || innerWidth <= 840) ?
             <nav className='mobile-nav' id='tablet-mobile-nav'>
                 <NavLink to={'/home'}>
                     <div className="home-mobile">

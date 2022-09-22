@@ -1,3 +1,5 @@
+// Page Home
+
 @media screen and (max-width: 1280px) {
     #tablet-mobile-nav {
 
@@ -18,7 +20,6 @@
     }
 
     #tablet-text-lamp-container {
-        // justify-content: center;
 
         #tablet-text-container {
             width: 40%;
@@ -42,6 +43,10 @@
     }
 
     #tablet-mobile-nav {
+
+        .home-mobile, .about-mobile, .skills-mobile, .portfolio-mobile {
+            justify-content: center;
+        }
 
         h2 {
             display: none;
@@ -74,11 +79,24 @@
 
 @media screen and (max-width: 526px) {
 
+    #tablet-comet {
+        left: 260px;
+    }
+
     #tablet-text-lamp-container {
         text-align: center;
 
         #tablet-text-container {
             width: 100%;
+
+            h1 {
+                font-size: 2em;
+                padding: 0 10px;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
         }
 
         .blink-text-container {
@@ -91,4 +109,124 @@
             display: none;
         }
     }  
+}
+
+// Page About
+
+@media screen and (max-width: 1280px) {
+    #responsive-about-foreground {
+        height: 800px;       
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #responsive-about-foreground {
+        height: 1000px;       
+    }
+
+    #responsive-about-main {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        height: 100%;
+        padding-top: 20px;
+
+        .presentation-container {
+            height: 65%;
+            width: 450px;
+        }
+
+        .contact-container {
+            height: 30%;
+            width: 450px;
+            display: flex;
+            align-items: center;
+
+            .contact-background {
+                height: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+
+    #responsive-about-main {
+        width: calc(100% - 100px);
+    }
+}
+
+@media screen and (max-width: 545px) {
+
+    #responsive-about-foreground {
+        height: fit-content;
+        aside {
+            background-color: hsl(185deg 21% 12% / 70%);
+        }
+    }
+
+    #responsive-about-main {
+        background-color: hsl(185deg 21% 12% / 70%);
+        justify-content: flex-start;
+
+        .presentation-container {
+            width: 100%;
+            min-width: auto;
+            height: fit-content;
+            max-height: none;
+            margin: 32px 0;
+            background-color: transparent;
+
+            p {
+                line-height: 36px;
+            }
+
+            .introduction-photo {
+                height: fit-content;
+                margin: 0 20px 20px 20px;
+                flex-direction: column-reverse;
+
+                img {
+                    align-self: center;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .main-info {
+                height: fit-content;
+                margin-bottom: 20px;
+            }
+
+            .buttons {
+                height: fit-content;
+            }
+        }
+
+        .contact-container {
+            width: 100%;
+            height: fit-content;
+            min-width: auto;
+            max-width: none;
+
+            .contact-background {
+                height: fit-content;
+                max-height: none;
+                background-color: transparent;
+                flex-wrap: nowrap;
+
+                .contact-title h3 {
+                    margin: 0;
+                }
+
+                .contact-info {
+                    height: fit-content;
+                    word-break: break-all;
+                }
+
+                .contact-arrow {
+                    height: 20%;
+                    margin: 10px 20px;
+                }
+            }
+        }
+    }
 }

@@ -10,10 +10,16 @@ const Contact = () => {
         const selectContactBox = document.querySelector('.contact-container');
         selectContactBox.classList.remove('contact-appears');
         selectContactBox.classList.add('contact-disappears');
+
+        window.scrollBy({
+            top: -1000,
+            left: 0,
+            behavior : "smooth"
+        })
     }
 
     return (
-        <div className='contact-container'>
+        <div className='contact-container' id='contact-anchor'>
             <div className="contact-background">
                 <div className="contact-title">
                     <h3>Me contacter</h3>

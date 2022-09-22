@@ -55,12 +55,12 @@ const About = () => {
                 <img src={lavanders} alt="" />
                 <div className="flowers"></div>
             </div>
-            <div className="foreground-content">
+            <div className="foreground-content" id='responsive-about-foreground'>
                 <Aside />
-                <header>
+                <header id='tablet-header'>
                     <Navbar />
                 </header>
-                <main>
+                <main id='responsive-about-main'>
                    <Contact />
                    <Presentation /> 
                 </main>
