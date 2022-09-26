@@ -19,7 +19,6 @@ import moon from '../images/moon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import lamp from '../images/light_lamp2.png';
-import lightLamp from '../images/light_lamp.png';
 
 
 const Home = () => {
@@ -329,7 +328,9 @@ const Home = () => {
                 </header>
                 <main id='tablet-main'>
                     <div className="arrow-container">
-                        <FontAwesomeIcon icon={faChevronDown} className="arrow-scroll" />
+                        { (window.scrollY + window.innerHeight <= 2399) ?
+                            <FontAwesomeIcon icon={faChevronDown} className="arrow-scroll" />
+                        : null }
                         <div className="text-lamp-container" id='tablet-text-lamp-container'>
                             <div className="text-container" id='tablet-text-container'>
                                 <h1>Bonjour et bienvenue sur mon site !</h1>

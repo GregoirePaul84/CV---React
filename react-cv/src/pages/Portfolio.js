@@ -28,7 +28,6 @@ let projectObject = [
     },
     { projectName : "Ohmyfood !",
       projectColor: "#9356DC",
-      projectFont : "'Shrikhand', cursive",
       projectText : "Intégration de maquettes en HTML / CSS, implémentation d’animations CSS.",
       projectImg : ohMyFoodImg,
       projectSite : "https://gregoirepaul84.github.io/GregoirePaulet_3_04112021/",
@@ -147,19 +146,18 @@ const Portfolio = () => {
                 <div className="background-rain"></div>
                 <div className="background-gray"></div>
             </div>
-            <div className="foreground-content">
+            <div className="foreground-content" id='responsive-portfolio-foreground'>
                 <Aside />
-                <header>
+                <header id='responsive-header'>
                     <Navbar />
                 </header>
-                <main>
+                <main id='responsive-portfolio-main'>
                     <div className="all-projects-container">
                         {projectObject.map((key) => {
                             return (
                             <ProjectBox key={key.projectName} 
                             projectName={key.projectName} 
                             projectColor={key.projectColor}
-                            projectFont={key.projectFont}
                             projectText={key.projectText}
                             projectImg={key.projectImg}
                             projectSite={key.projectSite}

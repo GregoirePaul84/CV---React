@@ -367,3 +367,91 @@
     }
 
 }
+
+// Page Portfolio
+
+@media screen and (max-width: 1280px) {
+
+    #responsive-portfolio-foreground {
+        height: fit-content;
+        #responsive-portfolio-main {
+            margin: 0;
+            .all-projects-container {
+                flex-wrap: nowrap;
+                flex-direction: column;
+                gap: 3em;
+                margin: 3em 0;
+
+                .project-card {
+                    min-width: 440px;
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 840px) {
+
+    #responsive-portfolio-main {
+        width: calc(100% - 100px);
+    }
+    
+}
+
+@media screen and (max-width: 545px) {
+    #responsive-portfolio-foreground {
+
+        aside {
+            background-color: hsl(185deg 21% 12% / 70%);
+        }
+
+        #responsive-portfolio-main {
+            background-color: hsl(185deg 21% 12% / 70%);
+            .all-projects-container {
+                margin: 0 0 3em 0;
+
+                .project-card {
+                    min-width: auto;
+                    width: 100%;
+                    height: fit-content;
+                    background-color: transparent;
+                    border-bottom: 7px solid hsl(0deg 6% 59% / 28%);
+
+
+                    .project-header {
+                        height: 90px;
+                        justify-content: center;
+
+                        .project-title {
+                            margin: 0;
+                        }
+                    }
+
+                    .project-content {
+                        flex-direction: column;
+
+                        .project-left {
+                            height: 40%;
+                            margin: 20px 0;
+
+                            .text-container {
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .project-right {
+                            height: 60%;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .colored-line {
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+}

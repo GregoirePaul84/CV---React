@@ -12,6 +12,7 @@ const Aside = () => {
     const [innerWidth, setinnerWidth] = useState(0);
     
     useEffect(() => {
+
         const handleScroll = () => {
             setScrollY(window.scrollY);
         };
@@ -22,7 +23,7 @@ const Aside = () => {
             setinnerWidth(window.innerWidth);
         };
 
-        handleScroll();
+        handleWidth();
     
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", handleWidth);
@@ -32,6 +33,7 @@ const Aside = () => {
         };
 
     });
+
 
     return (
         <aside>
