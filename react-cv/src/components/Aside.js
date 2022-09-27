@@ -9,9 +9,12 @@ import { NavLink } from 'react-router-dom';
 const Aside = () => {
 
     const [scrollY, setScrollY] = useState(0);
-    const [innerWidth, setinnerWidth] = useState(0);
+    const [innerWidth, setInnerWidth] = useState(0);
+    const [innerHeight, setInnerHeight] = useState(0);
     
     useEffect(() => {
+
+        console.log(innerHeight);
 
         const handleScroll = () => {
             setScrollY(window.scrollY);
@@ -20,23 +23,31 @@ const Aside = () => {
         handleScroll();
 
         const handleWidth = () => {
-            setinnerWidth(window.innerWidth);
+            setInnerWidth(window.innerWidth);
+        };
+
+        handleWidth();
+
+        const handleHeight = () => {
+            setInnerHeight(window.innerHeight);
         };
 
         handleWidth();
     
         window.addEventListener("scroll", handleScroll);
         window.addEventListener("resize", handleWidth);
+        window.addEventListener("resize", handleHeight);
         return () => {
           window.removeEventListener("scroll", handleScroll);
           window.removeEventListener("resize", handleWidth);
+          window.addEventListener("resize", handleHeight);
         };
 
     });
 
 
     return (
-        <aside>
+        <aside id='responsive-aside'>
             <div className="logo">
                 <h1>G P</h1>
             </div>

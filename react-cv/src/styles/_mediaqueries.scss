@@ -111,6 +111,36 @@
     }  
 }
 
+@media screen and (max-height: 600px) {
+    #responsive-aside {
+        display: flex;
+        flex-wrap: wrap-reverse;
+
+        .logo {
+            width: 60%;
+            height: 65%;
+            order: 1;
+            align-items: center;
+
+            h1 {
+                font-size: 3em;
+                margin: 0;
+            }
+        }
+
+        .name-job-container {
+            height: 35%;
+            align-self: end;
+        }
+
+        .mobile-nav {
+            order: 2;
+            width: 40%;
+            height: 65%;
+        }
+    }
+}
+
 // Page About
 
 @media screen and (max-width: 1280px) {
