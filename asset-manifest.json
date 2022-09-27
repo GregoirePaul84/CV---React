@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CV_React/static/css/main.676aa62f.css",
-    "main.js": "/CV_React/static/js/main.820afa90.js",
+    "main.css": "/CV_React/static/css/main.45eed6e7.css",
+    "main.js": "/CV_React/static/js/main.38fad7a0.js",
     "static/js/787.11baedba.chunk.js": "/CV_React/static/js/787.11baedba.chunk.js",
     "static/media/sun2.png": "/CV_React/static/media/sun2.83e5567beefab898c930.png",
     "static/media/cloud_vietnam.png": "/CV_React/static/media/cloud_vietnam.48546a3fe914e42888aa.png",
@@ -17,6 +17,7 @@
     "static/media/booki.png": "/CV_React/static/media/booki.537e7c0e30663095f492.png",
     "static/media/photo_cv.png": "/CV_React/static/media/photo_cv.44c2c856e8a385df5275.png",
     "static/media/ohmyfood.png": "/CV_React/static/media/ohmyfood.566460a87b985254254e.png",
+    "static/media/CV.pdf": "/CV_React/static/media/CV.b66741308dc5b8b132b2.pdf",
     "static/media/2eplan2.png": "/CV_React/static/media/2eplan2.ec279888224f201e799e.png",
     "static/media/cloud2.png": "/CV_React/static/media/cloud2.bc3a9c053cf6f3e80ec3.png",
     "static/media/cloud3.png": "/CV_React/static/media/cloud3.e6110bab9778ac8ea5e6.png",
@@ -25,16 +26,15 @@
     "static/media/piiquante.png": "/CV_React/static/media/piiquante.e9d488873cf5a05d6c39.png",
     "static/media/stars2.png": "/CV_React/static/media/stars2.25d984298abf8097d1bf.png",
     "static/media/light_lamp2.png": "/CV_React/static/media/light_lamp2.ee37e3570cb05d78b646.png",
-    "static/media/light_lamp.png": "/CV_React/static/media/light_lamp.df654252fbbc4426b65c.png",
     "static/media/light_down.png": "/CV_React/static/media/light_down.f2f09654f67d75dd787a.png",
     "static/media/1erplan-2.png": "/CV_React/static/media/1erplan-2.a3a9f34dd2bb018d7be3.png",
     "index.html": "/CV_React/index.html",
-    "main.676aa62f.css.map": "/CV_React/static/css/main.676aa62f.css.map",
-    "main.820afa90.js.map": "/CV_React/static/js/main.820afa90.js.map",
+    "main.45eed6e7.css.map": "/CV_React/static/css/main.45eed6e7.css.map",
+    "main.38fad7a0.js.map": "/CV_React/static/js/main.38fad7a0.js.map",
     "787.11baedba.chunk.js.map": "/CV_React/static/js/787.11baedba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.676aa62f.css",
-    "static/js/main.820afa90.js"
+    "static/css/main.45eed6e7.css",
+    "static/js/main.38fad7a0.js"
   ]
 }
