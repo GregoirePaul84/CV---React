@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
 
-import cloud1 from '../images/cloud1.png';
-import cloud2 from '../images/cloud2.png';
-import cloud3 from '../images/cloud3.png';
-import parallax2 from '../images/2eplan2.png';
-import parallax3 from '../images/1erplan.png';
-import parallax4 from '../images/1erplan-2.png';
-import parallax5 from '../images/4eplan.png';
-import parallax6 from '../images/5eplan.png';
-import parallax7 from '../images/sun2.png';
-import parallax8 from '../images/sun_sunset.png';
-import stars from '../images/stars2.png';
-import comet from '../images/comet.png';
-import moon from '../images/moon.png';
+import cloud1 from '../media/cloud1.png';
+import cloud2 from '../media/cloud2.png';
+import cloud3 from '../media/cloud3.png';
+import parallax2 from '../media/2eplan2.png';
+import parallax3 from '../media/1erplan.png';
+import parallax4 from '../media/1erplan-2.png';
+import parallax5 from '../media/4eplan.png';
+import parallax6 from '../media/5eplan.png';
+import parallax7 from '../media/sun2.png';
+import parallax8 from '../media/sun_sunset.png';
+import stars from '../media/stars2.png';
+import comet from '../media/comet.png';
+import moon from '../media/moon.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import lamp from '../images/light_lamp2.png';
+import lamp from '../media/light_lamp2.png';
 
 
 const Home = () => {
@@ -51,8 +51,6 @@ const Home = () => {
 
         const handleScroll = () => {
             setScrollY(window.scrollY);
-
-            console.log(scrollY);
 
             if(scrollY === 0) {
                 selectStars.style.opacity = `0`;
@@ -207,6 +205,7 @@ const Home = () => {
         
         const message = ["Je suis Grégoire Paulet,", "Développeur web junior"];
         let i = 0;
+        // eslint-disable-next-line
         let timer;
 
         function typingEffect() {
@@ -252,7 +251,7 @@ const Home = () => {
                 
                 else {         
                     
-                    // Changement de l'index de la variable word ligne 134
+                    // Changement de l'index de la variable word ligne 212
                     if (message.length > (i + 1)) {
                         i++;
                         
@@ -276,47 +275,47 @@ const Home = () => {
         <div className="home-container">
             <div className="background-picture">
                 <div className='smallCloud-container'>
-                    <img className='smallCloud' src={cloud1} alt="" />
+                    <img className='smallCloud' src={cloud1} alt="petit nuage" />
                 </div>
                 <div className='middleCloud-container'>
-                    <img className='middleCloud' src={cloud2} alt="" />
+                    <img className='middleCloud' src={cloud2} alt="nuage moyen" />
                 </div>
                 <div className='middleCloud-container2'>
-                    <img className='middleCloud' src={cloud2} alt="" />
+                    <img className='middleCloud' src={cloud2} alt="nuage moyen" />
                 </div>
                 <div className='bigCloud-container'>
-                    <img className='bigCloud' src={cloud3} alt="" />
+                    <img className='bigCloud' src={cloud3} alt="gros nuage" />
                 </div>
                 <div className="parallax parallax_1">
-                    <img src={parallax6} />
+                    <img src={parallax6} alt="ciel"/>
                 </div>
                 <div className="parallax parallax_5">
-                    <img src={parallax5} />
+                    <img src={parallax5} alt="sable 4ème plan"/>
                 </div>
                 <div className="parallax parallax_6">
-                    <img src={parallax7} className="sun"/>
-                    <img src={parallax8} className="sunset"/>
+                    <img src={parallax7} className="sun" alt="soleil"/>
+                    <img src={parallax8} className="sunset" alt="soleil couchant"/>
                 </div>
                 <div className="parallax parallax_2">
-                    <img src={parallax2} />
+                    <img src={parallax2} alt="sable 3ème plan"/>
                 </div>
                 <div className="parallax parallax_3">
-                    <img src={parallax3} />
+                    <img src={parallax3} alt="sable 2ème plan"/>
                 </div>
                 <div className="parallax parallax_4">
-                    <img src={parallax4} />
+                    <img src={parallax4} alt="sable 1er plan"/>
                 </div>
                 <div className="stars">
-                    <img src={stars} alt="" />
+                    <img src={stars} alt="étoiles nuit" />
                 </div>
                 <div className="comet">
-                    <img src={comet} alt="" />
+                    <img src={comet} alt="1ère comète" />
                 </div>
                 <div className="comet2" id='tablet-comet'>
-                    <img src={comet} alt="" />
+                    <img src={comet} alt="2ème comète" />
                 </div>
                 <div className="moon">
-                    <img src={moon} alt="" />
+                    <img src={moon} alt="lune" />
                 </div>
                 <div className="background-night"></div>
             </div>
@@ -335,7 +334,7 @@ const Home = () => {
                             <div className="text-container" id='tablet-text-container'>
                                 <h1>Bonjour et bienvenue sur mon site !</h1>
                                 <div className="blink-text-container">
-                                    <h2 className='blink-text'></h2>
+                                    <h2 className='blink-text'>{}</h2>
                                     <span>&#9646;</span>
                                 </div>
                             </div>

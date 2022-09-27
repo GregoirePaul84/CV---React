@@ -1,6 +1,7 @@
 import React from 'react';
 
-import photoCV from '../images/photo_cv.png'
+import photoCV from '../media/photo_cv.png';
+import cv from '../media/CV.pdf';
 
 const Presentation = () => {
 
@@ -20,7 +21,7 @@ const Presentation = () => {
         <div className='presentation-container'>
             <div className="introduction-photo">
                 <p>Je suis âgé de <span>33 ans</span> et suis domicilié dans le sud de la France (Avignon).</p>
-                <img src={photoCV} alt="photo me représentant" />
+                <img src={photoCV} alt="Grégoire Paulet" />
             </div>
             <div className="main-info">
                 <p>A la suite d’une reconversion je me suis découvert une passion pour le monde du web, particulièrement pour le <span>développement front-end</span>. 
@@ -28,7 +29,9 @@ const Presentation = () => {
                 Si vous êtes à la recherche d’un alternant en développement web / intégration web et que mon profil vous intéresse, n’hésitez pas à me contacter!</p>
             </div>
             <div className="buttons">
-                <button>Mon CV</button>
+                <a href={cv} target="_blank" rel="noreferrer">
+                    <button>Mon CV</button>
+                </a>
                 <button onClick={displayContact}>Contact</button>
             </div>
         </div>

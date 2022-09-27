@@ -1,15 +1,15 @@
 import React from 'react';
 
-import htmlImg from '../images/html5.png';
-import cssImg from '../images/css3.png';
-import sassImg from '../images/sass.png';
-import javascriptImg from '../images/javascript.png';
-import reactImg from '../images/react.png';
+import htmlImg from '../media/html5.png';
+import cssImg from '../media/css3.png';
+import sassImg from '../media/sass.png';
+import javascriptImg from '../media/javascript.png';
+import reactImg from '../media/react.png';
 import ProgressBar from './ProgressBar';
 
-import nodeImg from '../images/nodejs.png';
-import sqlImg from '../images/sql.png';
-import mongoImg from '../images/mongo.png';
+import nodeImg from '../media/nodejs.png';
+import sqlImg from '../media/sql.png';
+import mongoImg from '../media/mongo.png';
 
 // import nodeJsImg 
 

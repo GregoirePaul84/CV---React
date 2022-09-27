@@ -1,11 +1,9 @@
 import React from 'react';
 
-import githubLogo from '../images/github.png'
+import githubLogo from '../media/github.png';
 
-const ProjectBox = ({projectName, projectColor, projectFont, projectText, projectImg, projectSite, projectGithub}) => {
-
-    console.log(projectName);
-    
+const ProjectBox = ({projectName, projectColor, projectFont, projectText, projectImg, projectSite, projectGithub, isProjectAvailable}) => {
+    console.log(isProjectAvailable);
     return (
         <article className={`project-card ${projectName}`}>
             <div className="project-header" style={{borderBottom:"7px solid" + projectColor}}>
@@ -20,7 +18,7 @@ const ProjectBox = ({projectName, projectColor, projectFont, projectText, projec
                     </div>
                     <div className="colored-line" style={{borderRight:"2px solid" + projectColor}}></div>
                     <div className="github-container">
-                        <a href={projectGithub} target="_blank">
+                        <a href={projectGithub} target="_blank" rel="noreferrer">
                             <img src={githubLogo} alt="" />
                             <span>Github</span>
                         </a>
@@ -28,8 +26,11 @@ const ProjectBox = ({projectName, projectColor, projectFont, projectText, projec
                 </div>
                 <div className="project-right">
                     <div className="project-img">
-                        <a href={projectSite} target="_blank">
+                        <a href={projectSite} target="_blank" rel="noreferrer">
                             <img src={projectImg} alt="" />
+                            {(isProjectAvailable === false) ? 
+                            <div className='unavailable-project'>Site non disponible</div>
+                            : null}
                         </a>
                     </div>
                 </div>

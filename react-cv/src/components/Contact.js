@@ -10,12 +10,6 @@ const Contact = () => {
         const selectContactBox = document.querySelector('.contact-container');
         selectContactBox.classList.remove('contact-appears');
         selectContactBox.classList.add('contact-disappears');
-
-        // window.scrollBy({
-        //     top: -1000,
-        //     left: 0,
-        //     behavior : "smooth"
-        // })
     }
 
     return (
