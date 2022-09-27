@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
 
-import cloud1 from '../media/cloud1.png';
-import cloud2 from '../media/cloud2.png';
-import cloud3 from '../media/cloud3.png';
-import parallax2 from '../media/2eplan2.png';
-import parallax3 from '../media/1erplan.png';
-import parallax4 from '../media/1erplan-2.png';
-import parallax5 from '../media/4eplan.png';
-import parallax6 from '../media/5eplan.png';
-import parallax7 from '../media/sun2.png';
-import parallax8 from '../media/sun_sunset.png';
-import stars from '../media/stars2.png';
+import cloud1 from '../media/small_cloud.webp';
+import cloud2 from '../media/middle_cloud.webp';
+import cloud3 from '../media/inverted_cloud.webp';
+import parallax2 from '../media/2eplan2.webp';
+import parallax3 from '../media/1erplan.webp';
+import parallax4 from '../media/1erplan-2.webp';
+import parallax5 from '../media/4eplan.webp';
+import parallax6 from '../media/5eplan.webp';
+import parallax7 from '../media/sun.webp';
+import parallax8 from '../media/sunset.webp';
+import stars from '../media/stars2.webp';
 import comet from '../media/comet.png';
 import moon from '../media/moon.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import lamp from '../media/light_lamp2.png';
+import lamp from '../media/light_lamp2.webp';
 
 
 const Home = () => {
