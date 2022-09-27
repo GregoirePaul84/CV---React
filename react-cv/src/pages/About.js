@@ -4,7 +4,7 @@ import Contact from '../components/Contact';
 import Navbar from '../components/Navbar';
 import Presentation from '../components/Presentation';
 
-import lavanders from '../media/lavandes.jpg';
+import lavanders from '../media/lavandes.webp';
 
 let flowers;
 

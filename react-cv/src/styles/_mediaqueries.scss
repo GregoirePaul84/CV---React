@@ -261,6 +261,26 @@
     }
 }
 
+@media screen and (max-width: 390px) {
+    #responsive-about-main {
+        .buttons {
+            a {
+                width: 50%;
+
+                button {
+                    width: 100%;
+                }
+            }
+
+            button {
+                &:nth-child(2) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+
 // Page Skills
 
 @media screen and (max-width: 1280px) {
