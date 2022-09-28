@@ -2,16 +2,16 @@ import React, { useEffect } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
 
-import vietnam from '../media/vietnam.jpg';
-import vietnamCloud from '../media/cloud_vietnam.png';
+import vietnam from '../media/vietnam.webp';
+import vietnamCloud from '../media/vietnam-cloud.webp';
 import ProjectBox from '../components/ProjectBox';
 
-import bookiImg from '../media/booki.png';
-import ohMyFoodImg from '../media/ohmyfood.png';
-import laChouetteAgenceImg from '../media/lachouetteagence.png';
-import kanapImg from '../media/kanap.png';
-import piiquanteImg from '../media/piiquante.png';
-import groupomaniaImg from '../media/groupomania.png';
+import bookiImg from '../media/booki.webp';
+import ohMyFoodImg from '../media/ohmyfood.webp';
+import laChouetteAgenceImg from '../media/lachouetteagence.webp';
+import kanapImg from '../media/kanap.webp';
+import piiquanteImg from '../media/piiquante.webp';
+import groupomaniaImg from '../media/groupomania.webp';
 
 
 let timePortfolio = 0;
@@ -95,7 +95,6 @@ const Portfolio = () => {
 
         function increaseTime() {
             timePortfolio ++;
-            // console.log(timePortfolio);
 
             if (timePortfolio === 15) {
                 selectWeather.classList.remove('inactive-background-gray');
@@ -103,14 +102,12 @@ const Portfolio = () => {
             }
 
             else if (timePortfolio === 20) {
-                console.log('pluie');
                 rain = setInterval(rainFall, 10);
                 selectBgImg.classList.remove('blur0px');
                 selectBgImg.classList.add('blur2px');
             }
 
             else if (timePortfolio === 60) {
-                console.log('soleil');
                 selectWeather.classList.remove('active-background-gray');
                 selectWeather.classList.add('inactive-background-gray');
                 selectBgImg.classList.remove('blur2px');
@@ -130,7 +127,6 @@ const Portfolio = () => {
     }, [])
 
     useEffect(() => {
-        // Anything in here is fired on component mount.
         return () => {
             console.log('composant démonté');
             clearInterval(timer);
@@ -142,7 +138,7 @@ const Portfolio = () => {
         <div className="portfolio-container">
             <div className="background-picture">
                 <img src={vietnam} alt="" className='bg-img' />
-                <img src={vietnamCloud} alt="" className='light-cloud'/>
+                <img src={vietnamCloud} alt="" className='vietnam-cloud'/>
                 <div className="background-rain"></div>
                 <div className="background-gray"></div>
             </div>

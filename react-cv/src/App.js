@@ -10,11 +10,11 @@ const App = () => {
   return (
     <Router>
             <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/home" element={<Home/>} />
-                <Route path="/about" element={<About/>} />
-                <Route path="/portfolio" element={<Portfolio/>} />
-                <Route path="/skills" element={<Skills/>} />
+                <Route path="/CV_React/" element={<Home/>} />
+                <Route path="/CV_React/home" element={<Home/>} />
+                <Route path="/CV_React/about" element={<About/>} />
+                <Route path="/CV_React/portfolio" element={<Portfolio/>} />
+                <Route path="/CV_React/skills" element={<Skills/>} />
 
                 {/* Redirection vers Home si paramètres inconnus */}
                 <Route path="*" element={<Home/>} />

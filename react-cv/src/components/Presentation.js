@@ -1,6 +1,6 @@
 import React from 'react';
 
-import photoCV from '../media/photo_cv.png';
+import photoCV from '../media/photo_moi_couleur.webp';
 import cv from '../media/CV.pdf';
 
 const Presentation = () => {
@@ -20,7 +20,7 @@ const Presentation = () => {
     return (
         <div className='presentation-container'>
             <div className="introduction-photo">
-                <p>Je suis âgé de <span>33 ans</span> et suis domicilié dans le sud de la France (Avignon).</p>
+                <p>J'ai <span>33 ans</span> et suis domicilié dans le sud de la France (Avignon).</p>
                 <img src={photoCV} alt="Grégoire Paulet" />
             </div>
             <div className="main-info">

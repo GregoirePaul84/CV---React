@@ -19,7 +19,7 @@ const ProjectBox = ({projectName, projectColor, projectFont, projectText, projec
                     <div className="colored-line" style={{borderRight:"2px solid" + projectColor}}></div>
                     <div className="github-container">
                         <a href={projectGithub} target="_blank" rel="noreferrer">
-                            <img src={githubLogo} alt="" />
+                            <img src={githubLogo} alt="logo de github"/>
                             <span>Github</span>
                         </a>
                     </div>
@@ -27,7 +27,7 @@ const ProjectBox = ({projectName, projectColor, projectFont, projectText, projec
                 <div className="project-right">
                     <div className="project-img">
                         <a href={projectSite} target="_blank" rel="noreferrer">
-                            <img src={projectImg} alt="" />
+                            <img src={projectImg} alt="projet" />
                             {(isProjectAvailable === false) ? 
                             <div className='unavailable-project'>Site non disponible</div>
                             : null}

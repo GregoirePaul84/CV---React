@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
 
-import arabic from '../media/arabic.jpg';
-import lightDown from '../media/light_down.png';
+import arabic from '../media/arabic.webp';
+import lightDown from '../media/light_down.webp';
 
 import Technology from '../components/Technology';
 
