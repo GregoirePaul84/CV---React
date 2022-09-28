@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CV_React/static/css/main.c7087b61.css",
-    "main.js": "/CV_React/static/js/main.b84dbc74.js",
+    "main.css": "/CV_React/static/css/main.2d9613fe.css",
+    "main.js": "/CV_React/static/js/main.13167188.js",
     "static/media/CV.pdf": "/CV_React/static/media/CV.c52137b6f85414427de9.pdf",
     "static/media/kanap.webp": "/CV_React/static/media/kanap.bad28ab1b6b562dd1d2e.webp",
     "static/media/lavandes.webp": "/CV_React/static/media/lavandes.cc7664971633a4112b0d.webp",
@@ -28,11 +28,11 @@
     "static/media/1erplan-2.webp": "/CV_React/static/media/1erplan-2.5602c086c4395b2c0cec.webp",
     "static/media/sunset.webp": "/CV_React/static/media/sunset.5b8386219dda381b742a.webp",
     "index.html": "/CV_React/index.html",
-    "main.c7087b61.css.map": "/CV_React/static/css/main.c7087b61.css.map",
-    "main.b84dbc74.js.map": "/CV_React/static/js/main.b84dbc74.js.map"
+    "main.2d9613fe.css.map": "/CV_React/static/css/main.2d9613fe.css.map",
+    "main.13167188.js.map": "/CV_React/static/js/main.13167188.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7087b61.css",
-    "static/js/main.b84dbc74.js"
+    "static/css/main.2d9613fe.css",
+    "static/js/main.13167188.js"
   ]
 }
