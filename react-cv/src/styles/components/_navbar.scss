@@ -5,9 +5,7 @@ nav {
     height: 100%;
 
     .home, .about, .skills, .portfolio {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include flexbox-center;
         opacity: 0;
         width: 100%;
         height: calc(100% - 3px);

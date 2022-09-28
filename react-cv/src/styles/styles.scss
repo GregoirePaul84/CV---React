@@ -1,7 +1,8 @@
 @import './settings';
 @import './mediaqueries';
+@import './utils/animations';
+@import './utils/mixins';
 @import './pages/home';
-@import './animations';
 @import './components/navbar';
 @import './components/aside';
 @import './pages/about';

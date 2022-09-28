@@ -121,9 +121,7 @@
 
                     .buttons {
                         height: calc(100% - 63px);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+                        @include flexbox-center;
                         gap: 5em;
 
                         button {

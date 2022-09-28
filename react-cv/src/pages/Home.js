@@ -328,7 +328,10 @@ const Home = () => {
                 <main id='tablet-main'>
                     <div className="arrow-container">
                         { (window.scrollY + window.innerHeight <= 2399) ?
+                        <>
+                            <p className='scroll-text'>Scroll down</p>
                             <FontAwesomeIcon icon={faChevronDown} className="arrow-scroll" />
+                        </>
                         : null }
                         <div className="text-lamp-container" id='tablet-text-lamp-container'>
                             <div className="text-container" id='tablet-text-container'>
