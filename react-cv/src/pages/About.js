@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Aside from '../components/Aside';
 import Contact from '../components/Contact';
 import Loader from '../components/Loader';
@@ -12,6 +12,21 @@ let flowers;
 const loaderColor = "#544a7d";
 
 const About = () => {
+
+    const [ImgLoaded, setImgLoaded] = useState(false);
+
+    function checkIfLastImgLoaded() {
+        console.log('chargée');
+        setImgLoaded(true);
+    }
+
+    useEffect(() => {
+        console.log(ImgLoaded)
+        if(ImgLoaded) {
+            const selectLoader = document.getElementById('loader-container');
+            document.getElementById('about-loader').removeChild(selectLoader); 
+        }
+    }, [ImgLoaded]);
 
     useEffect(() => {
         const selectFlowers = document.querySelector('.flowers');
@@ -52,11 +67,6 @@ const About = () => {
         }
     }, []);
 
-    useEffect(() => {
-        const selectLoader = document.getElementById('loader-container');
-        setTimeout(() => {document.getElementById('about-loader').removeChild(selectLoader)}, 3000);
-    }, [])
-
     return (
         <>
         <div id="about-loader">
@@ -64,7 +74,7 @@ const About = () => {
         </div>
         <div className="about-container">
             <div className="background-picture">
-                <img src={lavanders} alt="" />
+                <img src={lavanders} alt="champ de lavande" onLoad={checkIfLastImgLoaded}/>
                 <div className="flowers"></div>
             </div>
             <div className="foreground-content" id='responsive-about-foreground'>

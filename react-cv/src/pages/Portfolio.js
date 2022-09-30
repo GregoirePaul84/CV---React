@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Aside from '../components/Aside';
 import Navbar from '../components/Navbar';
 
@@ -68,6 +68,21 @@ let projectObject = [
 
 const Portfolio = () => {
 
+    const [ImgLoaded, setImgLoaded] = useState(false);
+
+    function checkIfLastImgLoaded() {
+        console.log('chargée');
+        setImgLoaded(true);
+    }
+
+    useEffect(() => {
+        console.log(ImgLoaded)
+        if(ImgLoaded) {
+            const selectLoader = document.getElementById('loader-container');
+            document.getElementById('portfolio-loader').removeChild(selectLoader); 
+        }
+    }, [ImgLoaded]);
+
     useEffect(() => {
 
         const selectWeather = document.querySelector('.background-gray');
@@ -136,11 +151,6 @@ const Portfolio = () => {
         }
     }, []);
 
-    useEffect(() => {
-        const selectLoader = document.getElementById('loader-container');
-        setTimeout(() => {document.getElementById('portfolio-loader').removeChild(selectLoader)}, 2000);
-    }, []);
-
     return (
         <>
         <div id="portfolio-loader">
@@ -149,7 +159,7 @@ const Portfolio = () => {
         <div className="portfolio-container">
             <div className="background-picture">
                 <img src={vietnam} alt="" className='bg-img' />
-                <img src={vietnamCloud} alt="" className='vietnam-cloud'/>
+                <img src={vietnamCloud} alt="" className='vietnam-cloud' onLoad={checkIfLastImgLoaded}/>
                 <div className="background-rain"></div>
                 <div className="background-gray"></div>
             </div>

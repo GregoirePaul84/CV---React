@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Home from '../src/pages/Home';
@@ -7,10 +7,6 @@ import Portfolio from '../src/pages/Portfolio';
 import Skills from '../src/pages/Skills';
 
 const App = () => {
-
-  // useEffect(() => {
-  //   document.querySelector('.loader-container').remove();
-  // }, [])
 
   return (
     <Router>

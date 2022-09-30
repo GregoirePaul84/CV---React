@@ -23,12 +23,25 @@ import Loader from '../components/Loader';
 
 const loaderColor = "#AB6B21";
 
-
 const Home = () => {
 
+    const [ImgLoaded, setImgLoaded] = useState(false);
     const [scrollY, setScrollY] = useState(0);
     const [innerWidth, setinnerWidth] = useState(window.innerWidth);
     const [translateParallax, setTranslateParallax] = useState((-window.innerWidth / 100 + 11) * 100);
+
+    function checkIfLastImgLoaded() {
+        console.log('chargée');
+        setImgLoaded(true);
+    }
+
+    useEffect(() => {
+        console.log(ImgLoaded)
+        if(ImgLoaded) {
+            const selectLoader = document.getElementById('loader-container');
+            document.getElementById('home-loader').removeChild(selectLoader); 
+        }
+    }, [ImgLoaded]);
     
     useEffect(() => {
 
@@ -274,15 +287,10 @@ const Home = () => {
 
     }, []);
 
-    useEffect(() => {
-        const selectLoader = document.getElementById('loader-container');
-        setTimeout(() => {document.getElementById('home-loader').removeChild(selectLoader)}, 3000);
-    }, [])
-
     return (
         <>
         <div id="home-loader">
-            <Loader loaderColor={loaderColor}/>
+            <Loader loaderColor={loaderColor} />
         </div>
         <div className="home-container">
             <div className="background-picture">
@@ -354,7 +362,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="lamp-container" id='tablet-lamp-container'>
-                                <img src={lamp} alt="" />
+                                <img src={lamp} alt="" onLoad={checkIfLastImgLoaded}/>
                             </div>
                         </div>
                     </div>

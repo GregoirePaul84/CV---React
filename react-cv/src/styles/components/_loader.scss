@@ -5,7 +5,7 @@
     height: 100%;
     @include flexbox-center;
     gap: 30px;
-    animation: 2s ease-out 1s 1 normal forwards running loader-disappears;
+    // animation: 2s ease-out 1s 1 normal forwards running loader-disappears;
 
     .loading-spinner {
         display: inline-block;

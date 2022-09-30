@@ -15,8 +15,22 @@ const loaderColor = "#BC7B3A";
 
 const Skills = () => {
 
+    const [ImgLoaded, setImgLoaded] = useState(false);
     const [displayFront, setDisplayFront] = useState(false);
     const [displayBack, setDisplayBack] = useState(false);
+
+    function checkIfLastImgLoaded() {
+        console.log('chargée');
+        setImgLoaded(true);
+    }
+
+    useEffect(() => {
+        console.log(ImgLoaded)
+        if(ImgLoaded) {
+            const selectLoader = document.getElementById('loader-container');
+            document.getElementById('skills-loader').removeChild(selectLoader); 
+        }
+    }, [ImgLoaded]);
 
     function changeDisplayFront() {
         setDisplayBack(false);
@@ -90,11 +104,6 @@ const Skills = () => {
         }
     }, []);
 
-    useEffect(() => {
-        const selectLoader = document.getElementById('loader-container');
-        setTimeout(() => {document.getElementById('skills-loader').removeChild(selectLoader)}, 3000);
-    }, []);
-
     return (
         <>
         <div id="skills-loader">
@@ -102,8 +111,8 @@ const Skills = () => {
         </div>
         <div className="skills-container">
             <div className="background-picture">
-                <img src={arabic} alt="" />
-                <img src={lightDown} alt="" className='switch-light' />
+                <img src={arabic} alt="paysage de maison arabe" />
+                <img src={lightDown} alt="lumière de nuit" className='switch-light' onLoad={checkIfLastImgLoaded}/>
                 <div className="background-night"></div>
             </div>
             <div className="foreground-content" id='responsive-skills-foreground'>
