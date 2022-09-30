@@ -3,7 +3,7 @@ import React from 'react';
 import githubLogo from '../media/github.png';
 
 const ProjectBox = ({projectName, projectColor, projectFont, projectText, projectImg, projectSite, projectGithub, isProjectAvailable}) => {
-    console.log(isProjectAvailable);
+    
     return (
         <article className={`project-card ${projectName}`}>
             <div className="project-header" style={{borderBottom:"7px solid" + projectColor}}>

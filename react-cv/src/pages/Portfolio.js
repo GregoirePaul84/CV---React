@@ -12,7 +12,9 @@ import laChouetteAgenceImg from '../media/lachouetteagence.webp';
 import kanapImg from '../media/kanap.webp';
 import piiquanteImg from '../media/piiquante.webp';
 import groupomaniaImg from '../media/groupomania.webp';
+import Loader from '../components/Loader';
 
+const loaderColor = "#506911";
 
 let timePortfolio = 0;
 let rain;
@@ -124,7 +126,7 @@ const Portfolio = () => {
             increaseTime();
         }, 1000);
         
-    }, [])
+    }, []);
 
     useEffect(() => {
         return () => {
@@ -132,9 +134,18 @@ const Portfolio = () => {
             clearInterval(timer);
             timePortfolio = 0;
         }
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        const selectLoader = document.getElementById('loader-container');
+        setTimeout(() => {document.getElementById('portfolio-loader').removeChild(selectLoader)}, 2000);
+    }, []);
 
     return (
+        <>
+        <div id="portfolio-loader">
+            <Loader loaderColor={loaderColor}/>
+        </div>
         <div className="portfolio-container">
             <div className="background-picture">
                 <img src={vietnam} alt="" className='bg-img' />
@@ -167,6 +178,7 @@ const Portfolio = () => {
                 </main>
             </div>
         </div>
+        </>
     );
 };
 

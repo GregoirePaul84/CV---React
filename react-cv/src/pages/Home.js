@@ -19,6 +19,9 @@ import moon from '../media/moon.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import lamp from '../media/light_lamp2.webp';
+import Loader from '../components/Loader';
+
+const loaderColor = "#AB6B21";
 
 
 const Home = () => {
@@ -225,7 +228,7 @@ const Home = () => {
                 } 
                 // Si la longueur du tableau = 0, on lance l'effet de suppression
                 else {
-                    setTimeout(deletingEffect, 3000);
+                    setTimeout(deletingEffect, 2000);
                     return false;
                 };
                 // Relance la fonction tous les 100ms
@@ -271,7 +274,16 @@ const Home = () => {
 
     }, []);
 
+    useEffect(() => {
+        const selectLoader = document.getElementById('loader-container');
+        setTimeout(() => {document.getElementById('home-loader').removeChild(selectLoader)}, 3000);
+    }, [])
+
     return (
+        <>
+        <div id="home-loader">
+            <Loader loaderColor={loaderColor}/>
+        </div>
         <div className="home-container">
             <div className="background-picture">
                 <div className='smallCloud-container'>
@@ -349,6 +361,7 @@ const Home = () => {
                 </main>
             </div>
         </div>
+        </>
     );
 };
 

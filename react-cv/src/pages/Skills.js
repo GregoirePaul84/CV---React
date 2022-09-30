@@ -6,9 +6,12 @@ import arabic from '../media/arabic.webp';
 import lightDown from '../media/light_down.webp';
 
 import Technology from '../components/Technology';
+import Loader from '../components/Loader';
 
 let timeSkills = 0;
 let timer;
+
+const loaderColor = "#BC7B3A";
 
 const Skills = () => {
 
@@ -77,7 +80,7 @@ const Skills = () => {
 
         selectLight.style.opacity = "0";
 
-    }, [])
+    }, []);
 
     useEffect(() => {
         return () => {
@@ -85,9 +88,18 @@ const Skills = () => {
             clearInterval(timer);
             timeSkills = 0;
         }
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        const selectLoader = document.getElementById('loader-container');
+        setTimeout(() => {document.getElementById('skills-loader').removeChild(selectLoader)}, 3000);
+    }, []);
 
     return (
+        <>
+        <div id="skills-loader">
+            <Loader loaderColor={loaderColor}/>
+        </div>
         <div className="skills-container">
             <div className="background-picture">
                 <img src={arabic} alt="" />
@@ -121,6 +133,7 @@ const Skills = () => {
                 </main>
             </div>
         </div>
+        </>
     );
 };
 

@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 import Aside from '../components/Aside';
 import Contact from '../components/Contact';
+import Loader from '../components/Loader';
 import Navbar from '../components/Navbar';
 import Presentation from '../components/Presentation';
 
 import lavanders from '../media/lavandes.webp';
 
 let flowers;
+
+const loaderColor = "#544a7d";
 
 const About = () => {
 
@@ -49,7 +52,16 @@ const About = () => {
         }
     }, []);
 
+    useEffect(() => {
+        const selectLoader = document.getElementById('loader-container');
+        setTimeout(() => {document.getElementById('about-loader').removeChild(selectLoader)}, 3000);
+    }, [])
+
     return (
+        <>
+        <div id="about-loader">
+            <Loader loaderColor={loaderColor}/>
+        </div>
         <div className="about-container">
             <div className="background-picture">
                 <img src={lavanders} alt="" />
@@ -66,6 +78,7 @@ const About = () => {
                 </main>
             </div>
         </div>
+        </>
     );
 };
 

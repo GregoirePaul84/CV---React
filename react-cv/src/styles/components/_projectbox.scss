@@ -31,9 +31,7 @@
             .text-container {
                 height: 80%;
                 font-size: 1.2em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flexbox-center;
             }
 
             p {
@@ -50,9 +48,7 @@
             }
 
             .github-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include flexbox-center;
                 a {
                     width: auto;
                     display: flex;
@@ -74,10 +70,7 @@
 
         .project-right {
             flex-basis: 55%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            // overflow: hidden;
+            @include flexbox-center;
 
             .project-img {
                 width: 80%;
@@ -85,9 +78,7 @@
                 a {
                     height: 100%;
                     width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flexbox-center;
                     position: relative;
                 }
                 img {
