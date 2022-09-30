@@ -24,7 +24,7 @@ const About = () => {
         console.log(ImgLoaded)
         if(ImgLoaded) {
             const selectLoader = document.getElementById('loader-container');
-            document.getElementById('about-loader').removeChild(selectLoader); 
+            setTimeout(() => {document.getElementById('about-loader').removeChild(selectLoader)}, 1000); 
         }
     }, [ImgLoaded]);
 

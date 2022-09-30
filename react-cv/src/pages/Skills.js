@@ -28,7 +28,7 @@ const Skills = () => {
         console.log(ImgLoaded)
         if(ImgLoaded) {
             const selectLoader = document.getElementById('loader-container');
-            document.getElementById('skills-loader').removeChild(selectLoader); 
+            setTimeout(() => {document.getElementById('skills-loader').removeChild(selectLoader)}, 1000); 
         }
     }, [ImgLoaded]);
 

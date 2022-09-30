@@ -79,7 +79,7 @@ const Portfolio = () => {
         console.log(ImgLoaded)
         if(ImgLoaded) {
             const selectLoader = document.getElementById('loader-container');
-            document.getElementById('portfolio-loader').removeChild(selectLoader); 
+            setTimeout(() => {document.getElementById('portfolio-loader').removeChild(selectLoader)}, 1000); 
         }
     }, [ImgLoaded]);
 

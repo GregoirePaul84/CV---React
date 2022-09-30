@@ -39,7 +39,7 @@ const Home = () => {
         console.log(ImgLoaded)
         if(ImgLoaded) {
             const selectLoader = document.getElementById('loader-container');
-            document.getElementById('home-loader').removeChild(selectLoader); 
+            setTimeout(() => {document.getElementById('home-loader').removeChild(selectLoader)}, 1000); 
         }
     }, [ImgLoaded]);
     
