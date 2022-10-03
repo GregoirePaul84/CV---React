@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CV_React/static/css/main.e06df08c.css",
-    "main.js": "/CV_React/static/js/main.60bbee45.js",
+    "main.css": "/CV_React/static/css/main.56093c7f.css",
+    "main.js": "/CV_React/static/js/main.b2a1224c.js",
     "static/media/CV.pdf": "/CV_React/static/media/CV.2c1cc2c868acfcfb03fc.pdf",
     "static/media/kanap.webp": "/CV_React/static/media/kanap.bad28ab1b6b562dd1d2e.webp",
     "static/media/lavandes.webp": "/CV_React/static/media/lavandes.cc7664971633a4112b0d.webp",
@@ -28,11 +28,11 @@
     "static/media/1erplan-2.webp": "/CV_React/static/media/1erplan-2.5602c086c4395b2c0cec.webp",
     "static/media/sunset.webp": "/CV_React/static/media/sunset.5b8386219dda381b742a.webp",
     "index.html": "/CV_React/index.html",
-    "main.e06df08c.css.map": "/CV_React/static/css/main.e06df08c.css.map",
-    "main.60bbee45.js.map": "/CV_React/static/js/main.60bbee45.js.map"
+    "main.56093c7f.css.map": "/CV_React/static/css/main.56093c7f.css.map",
+    "main.b2a1224c.js.map": "/CV_React/static/js/main.b2a1224c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e06df08c.css",
-    "static/js/main.60bbee45.js"
+    "static/css/main.56093c7f.css",
+    "static/js/main.b2a1224c.js"
   ]
 }
