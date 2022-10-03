@@ -158,8 +158,8 @@ const Portfolio = () => {
         </div>
         <div className="portfolio-container">
             <div className="background-picture">
-                <img src={vietnam} alt="" className='bg-img' />
-                <img src={vietnamCloud} alt="" className='vietnam-cloud' onLoad={checkIfLastImgLoaded}/>
+                <img src={vietnam} alt="rizières vietnamiennes" className='bg-img' />
+                <img src={vietnamCloud} alt="gros nuage" className='vietnam-cloud' onLoad={checkIfLastImgLoaded}/>
                 <div className="background-rain"></div>
                 <div className="background-gray"></div>
             </div>
