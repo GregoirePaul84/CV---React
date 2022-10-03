@@ -17,6 +17,7 @@
                 top: 0;
                 right: 0;
                 z-index: 3;
+                opacity: 0;
             }
         }
 
@@ -31,7 +32,7 @@
         .active-night {
             animation: linear 1 forwards;
             animation-name: nightFalling;
-            animation-duration: 5s;
+            animation-duration: 2s;
             width: 100%;
             height: 100%;
         }
@@ -40,18 +41,20 @@
             animation: linear 1 forwards;
             animation-name: switchOnLight;
             animation-duration: 1s;
+            animation-delay: 2s;
         }
 
         .inactive-light {
             animation: linear 1 forwards;
             animation-name: switchOffLight;
             animation-duration: 1s;
+            animation-delay: 2s;
         }
 
         .active-day {
             animation: linear 1 forwards;
             animation-name: dawningDay;
-            animation-duration: 5s;
+            animation-duration: 2s;
             width: 100%;
             height: 100%;
         }

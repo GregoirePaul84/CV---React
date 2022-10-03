@@ -8,9 +8,6 @@ import lightDown from '../media/light_down.webp';
 import Technology from '../components/Technology';
 import Loader from '../components/Loader';
 
-let timeSkills = 0;
-let timer;
-
 const loaderColor = "#BC7B3A";
 
 const Skills = () => {
@@ -24,6 +21,27 @@ const Skills = () => {
         setImgLoaded(true);
     }
 
+    const selectNight = document.querySelector('.background-night');
+    const selectLight = document.querySelector('.switch-light');
+    
+    function displayNight() {
+        selectNight.classList.remove('active-day');
+        selectNight.classList.add('active-night');
+        selectLight.classList.add('active-light');
+        selectLight.classList.remove('inactive-light');
+        setTimeout(() => {selectLight.style.opacity = "1"}, 3000);
+    }
+    
+    function displayDay() {
+        if(selectNight.classList.contains('active-night')) {
+            selectNight.classList.remove('active-night');
+            selectNight.classList.add('active-day');
+            selectLight.classList.add('inactive-light');
+            selectLight.classList.remove('active-light');
+            setTimeout(() => {selectLight.style.opacity = "0"}, 3000);
+        }
+    }
+
     useEffect(() => {
         console.log(ImgLoaded)
         if(ImgLoaded) {
@@ -35,72 +53,18 @@ const Skills = () => {
     function changeDisplayFront() {
         setDisplayBack(false);
         setDisplayFront(!displayFront);
-        console.log('==== FRONT ====');
-        console.log(displayFront);
+        displayDay();
     }
 
     function changeDisplayBack() {
         setDisplayFront(false);
         setDisplayBack(!displayBack);
-        console.log('==== BACK ====');
-        console.log(displayBack);
+        displayNight();
     }
-
-    useEffect(() => {
-        const selectNight = document.querySelector('.background-night');
-        const selectLight = document.querySelector('.switch-light');
-
-        function displayNight() {
-            selectNight.classList.remove('active-day');
-            selectNight.classList.add('active-night');
-        }
-
-        function displayDay() {
-            selectNight.classList.remove('active-night');
-            selectNight.classList.add('active-day');
-            selectLight.style.opacity = "0";
-        }
-
-        function increaseTime() {
-            timeSkills ++;
-            // console.log(timeSkills);
-
-            if (timeSkills === 15) {
-                displayNight();
-            }
-
-            else if (timeSkills === 20) {
-                selectLight.classList.remove('inactive-light');
-                selectLight.classList.add('active-light');
-            }
-
-            else if (timeSkills === 30) {
-                displayDay();
-            }
-
-            else if (timeSkills === 35) {
-                selectLight.classList.remove('active-light');
-                selectLight.classList.add('inactive-light');
-            }
-
-            else if (timeSkills > 35) {
-                timeSkills = 1;
-            }
-        }
-
-        timer = setInterval(function () {
-            increaseTime();
-        }, 1000);
-
-        selectLight.style.opacity = "0";
-
-    }, []);
 
     useEffect(() => {
         return () => {
             console.log('composant démonté');
-            clearInterval(timer);
-            timeSkills = 0;
         }
     }, []);
 

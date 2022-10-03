@@ -68,6 +68,8 @@ const Home = () => {
         const handleScroll = () => {
             setScrollY(window.scrollY);
 
+            console.log(scrollY);
+
             if(scrollY === 0) {
                 selectStars.style.opacity = `0`;
             }
@@ -92,6 +94,22 @@ const Home = () => {
                     selectComet.style.display = `none`;
                     selectComet2.style.display = `none`;
                     selectMoon.style.opacity = `${scrollY / 600 - 1.5}`;
+
+                    if (window.innerWidth > 1675) {
+                        selectSun.style.transform = `translate(-${scrollY / 5}px, ${scrollY / 4}px)`;
+                        selectMoon.style.opacity = `${scrollY / 600 - 1.1}`;
+                        selectSunnyDay.style.opacity = `${removeDecimal / 1000 - 0.1}`;
+                    }
+
+                    if (window.innerWidth > 1790) {
+                        selectSun.style.transform = `translate(-${scrollY / 4}px, ${scrollY / 3}px)`;
+                        selectMoon.style.opacity = `${scrollY / 600 - 1}`;
+
+                        if(scrollY > 1240) {
+                            selectComet.style.display = `block`;
+                            selectComet2.style.display = `block`;
+                        }
+                    }
 
 
                     if (scrollY >= 800) {
