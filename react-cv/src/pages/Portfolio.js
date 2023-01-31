@@ -6,6 +6,8 @@ import vietnam from '../media/vietnam.webp';
 import vietnamCloud from '../media/vietnam-cloud.webp';
 import ProjectBox from '../components/ProjectBox';
 
+import zalaiImg from '../media/zalai.png';
+import bodinImg from '../media/bodin.png';
 import bookiImg from '../media/booki.webp';
 import ohMyFoodImg from '../media/ohmyfood.webp';
 import laChouetteAgenceImg from '../media/lachouetteagence.webp';
@@ -21,6 +23,20 @@ let rain;
 let timer;
 
 let projectObject = [
+    { projectName : "Menuiserie Bois Bodin",
+      projectColor : "#121c27",
+      projectText : "Réalisation d'un site vitrine pour un menuisier en React.js (en cours)",
+      projectImg : bodinImg,
+      projectSite : "https://gregoirepaul84.github.io/Menuiserie_Bois_Bodin/",
+      projectGithub : "https://github.com/GregoirePaul84/Menuiserie_Bois_Bodin"
+    },
+    { projectName : "Zalaï",
+      projectColor : "#e39f58",
+      projectText : "Réalisation de la partie front-end d'un site de vente de tapis berbères en React.js",
+      projectImg : zalaiImg,
+      projectSite : "https://gregoirepaul84.github.io/Zalai/",
+      projectGithub : "https://github.com/GregoirePaul84/Zalai"
+    },
     { projectName : "Booki",
       projectColor : "#0065FC",
       projectText : "Intégration d’une maquette en HTML / CSS, site responsive Desktop / Tablette / Mobile.",
